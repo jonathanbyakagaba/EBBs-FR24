@@ -1,0 +1,72 @@
+name: Update Entebbe movements
+
+# Daily top-up + manual runs. Enumerates FR24 flight-list history for
+# every seeded flight number, keeps the HUEN (Entebbe) legs, merges
+# them into data/movements.csv, downloads any missing playback tracks
+# into tracks/, and commits the result back to the repo.
+#
+# One-time setup: add the repo secret FR24_SUBSCRIPTION_KEY
+# (Settings > Secrets and variables > Actions) — the value of
+# subscription_key from your fr24.conf. Never commit the key itself.
+
+on:
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Enumerate back to this date (blank = 10 days ago). Use 2026-01-01 for a backfill; big backfills may hit the 6 h job limit — Codespaces is better for the first bulk run."
+        required: false
+        default: ""
+      fetch_tracks:
+        description: "Also download missing tracks (uncheck for a board-only refresh)"
+        type: boolean
+        default: true
+  schedule:
+    - cron: "15 4 * * *"  # 07:15 EAT daily
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ebb-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install FR24 library
+        run: pip install "fr24[curl,polars]==0.4.0" tzdata
+
+      - name: Enumerate movements
+        env:
+          FR24_SUBSCRIPTION_KEY: ${{ secrets.FR24_SUBSCRIPTION_KEY }}
+        run: |
+          SINCE="${{ inputs.since }}"
+          if [ -z "$SINCE" ]; then SINCE=$(date -u -d '10 days ago' +%F); fi
+          echo "Enumerating back to $SINCE"
+          python scripts/enumerate_ebb.py --since "$SINCE"
+
+      - name: Download missing tracks
+        if: ${{ inputs.fetch_tracks }}
+        continue-on-error: true
+        env:
+          FR24_SUBSCRIPTION_KEY: ${{ secrets.FR24_SUBSCRIPTION_KEY }}
+        run: python scripts/fetch_tracks.py data/track_targets.csv --out tracks
+
+      - name: Commit updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing new."
+          else
+            git commit -m "Daily EBB update $(date -u +%F)"
+            git push
+          fi

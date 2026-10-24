@@ -1,0 +1,1 @@
+flight_id_hex,number,callsign,airline,direction,from_iata,to_iata,registration,aircraft,status,atod_utc,atoa_utc,stod_utc,stoa_utc,ebb_date
