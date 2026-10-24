@@ -1,0 +1,55 @@
+airline,flight_number,confidence,notes
+Uganda Airlines,UR110,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR111,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR120,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR121,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR122,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR123,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR200,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR201,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR206,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR207,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR208,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR209,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR320,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR321,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR322,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR323,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR334,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR342,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR343,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR360,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR361,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR430,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR431,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR520,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR521,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR523,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR710,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR711,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR712,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR713,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR720,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR722,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR900,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR901,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR902,verified,operated Sep-Oct 2026 (FR24 repo)
+Uganda Airlines,UR903,verified,operated Sep-Oct 2026 (FR24 repo)
+Ethiopian Airlines,ET438,verify,confirm from a live EBB board; wrong guesses are filtered by the HUEN check
+Ethiopian Airlines,ET439,verify,confirm from a live EBB board
+Kenya Airways,KQ410,verify,confirm from a live EBB board
+Kenya Airways,KQ412,verify,confirm from a live EBB board
+Kenya Airways,KQ414,verify,confirm from a live EBB board
+Kenya Airways,KQ416,verify,confirm from a live EBB board
+Qatar Airways,QR1385,verify,confirm from a live EBB board
+Qatar Airways,QR1386,verify,confirm from a live EBB board
+Emirates,EK729,verify,confirm from a live EBB board
+Emirates,EK730,verify,confirm from a live EBB board
+flydubai,FZ661,verify,confirm from a live EBB board
+flydubai,FZ662,verify,confirm from a live EBB board
+Turkish Airlines,TK612,verify,confirm from a live EBB board
+Brussels Airlines,SN471,verify,often via Kigali; confirm from a live EBB board
+EgyptAir,MS837,verify,confirm from a live EBB board
+RwandAir,WB205,verify,confirm from a live EBB board
+Air Tanzania,TC212,verify,confirm from a live EBB board
+KLM,KL561,verify,confirm from a live EBB board
