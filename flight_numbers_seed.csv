@@ -35,21 +35,75 @@ Uganda Airlines,UR900,verified,operated Sep-Oct 2026 (FR24 repo)
 Uganda Airlines,UR901,verified,operated Sep-Oct 2026 (FR24 repo)
 Uganda Airlines,UR902,verified,operated Sep-Oct 2026 (FR24 repo)
 Uganda Airlines,UR903,verified,operated Sep-Oct 2026 (FR24 repo)
-Ethiopian Airlines,ET438,verify,confirm from a live EBB board; wrong guesses are filtered by the HUEN check
-Ethiopian Airlines,ET439,verify,confirm from a live EBB board
-Kenya Airways,KQ410,verify,confirm from a live EBB board
-Kenya Airways,KQ412,verify,confirm from a live EBB board
-Kenya Airways,KQ414,verify,confirm from a live EBB board
-Kenya Airways,KQ416,verify,confirm from a live EBB board
-Qatar Airways,QR1385,verify,confirm from a live EBB board
-Qatar Airways,QR1386,verify,confirm from a live EBB board
-Emirates,EK729,verify,confirm from a live EBB board
-Emirates,EK730,verify,confirm from a live EBB board
-flydubai,FZ661,verify,confirm from a live EBB board
-flydubai,FZ662,verify,confirm from a live EBB board
-Turkish Airlines,TK612,verify,confirm from a live EBB board
-Brussels Airlines,SN471,verify,often via Kigali; confirm from a live EBB board
-EgyptAir,MS837,verify,confirm from a live EBB board
-RwandAir,WB205,verify,confirm from a live EBB board
-Air Tanzania,TC212,verify,confirm from a live EBB board
-KLM,KL561,verify,confirm from a live EBB board
+Ethiopian Airlines,ET332,board,seen on FR24 EBB arrivals 26 Oct 2026 (ADD-EBB, A359/B38M)
+Ethiopian Airlines,ET334,board,seen on FR24 EBB arrivals 26 Oct 2026 (ADD-EBB, B38M)
+Ethiopian Airlines,ET336,board,seen on FR24 EBB arrivals 26 Oct 2026 (ADD-EBB)
+Ethiopian Airlines,ET338,board,seen on FR24 EBB arrivals 26 Oct 2026 (ADD-EBB, B38M, 00:55)
+Ethiopian Airlines,ET712,board,seen EBB-JNB departure (avionio EBB departures Oct 2026)
+Ethiopian Airlines,ET713,board,seen JNB-EBB arrival (airportia EBB)
+Ethiopian Airlines,ET52,board,seen LLW-EBB arrival (Lilongwe)
+Ethiopian Airlines,ET333,paired,return-direction guess for ET332 - confirm on next run
+Ethiopian Airlines,ET335,paired,return-direction guess for ET334 - confirm on next run
+Ethiopian Airlines,ET337,paired,return-direction guess for ET336 - confirm on next run
+Ethiopian Airlines,ET339,paired,return-direction guess for ET338 - confirm on next run
+Ethiopian Airlines,ET53,paired,return-direction guess for ET52 - confirm on next run
+Kenya Airways,KQ410,verified,returned EBB legs in our own run Oct 2026
+Kenya Airways,KQ412,verified,returned EBB legs in our own run Oct 2026
+Kenya Airways,KQ414,verified,returned EBB legs in our own run Oct 2026
+Kenya Airways,KQ416,verified,returned EBB legs in our own run Oct 2026
+Kenya Airways,KQ418,board,seen NBO-EBB arrival (FlightAware HUEN)
+Kenya Airways,KQ420,board,seen NBO-EBB arrival 26 Oct 2026 (09:05)
+Kenya Airways,KQ411,paired,EBB-NBO return of KQ410
+Kenya Airways,KQ413,paired,EBB-NBO return of KQ412
+Kenya Airways,KQ415,paired,EBB-NBO return of KQ414
+Kenya Airways,KQ417,paired,EBB-NBO return of KQ416
+Kenya Airways,KQ419,paired,EBB-NBO return of KQ418
+Kenya Airways,KQ421,paired,EBB-NBO return of KQ420
+Qatar Airways,QR1383,board,seen DOH-EBB arrival 26 Oct 2026 (15:30)
+Qatar Airways,QR1391,board,seen DOH-EBB arrival (00:10)
+Qatar Airways,QR1384,board,seen EBB-DOH departure (17:30)
+Qatar Airways,QR1392,board,seen EBB-DOH departure (01:40)
+Qatar Airways,QR8703,board,cargo service EBB-DOH seen on EBB departures board
+Qatar Airways,QR6412,codeshare,RwandAir-operated KGL-EBB; deduped by flight id
+Qatar Airways,QR6434,codeshare,RwandAir-operated KGL-EBB; deduped by flight id
+Emirates,EK729,verified,returned EBB legs in our own run Oct 2026 (DXB-EBB)
+Emirates,EK730,verified,returned EBB legs in our own run Oct 2026 (EBB-DXB)
+flydubai,FZ651,board,seen DXB-EBB arrival 18:25 (planefinder/flight-status Oct 2026)
+flydubai,FZ652,board,seen EBB-DXB departure 19:25
+Turkish Airlines,TK612,verified,returned EBB legs in our own run Oct 2026
+Turkish Airlines,TK569,board,seen KGL-EBB arrival (04:40)
+Brussels Airlines,SN455,board,seen KGL-EBB arrival (BEL455, A333)
+Brussels Airlines,SN465,board,seen KGL-EBB arrival (BEL465, A333)
+Brussels Airlines,SN456,paired,EBB-KGL return of SN455
+Brussels Airlines,SN466,paired,EBB-KGL return of SN465
+EgyptAir,MS837,verified,returned EBB legs in our own run Oct 2026 (CAI-EBB, A20N)
+EgyptAir,MS835,board,seen KGL-EBB arrival (verify routing)
+EgyptAir,MS838,paired,EBB-CAI return of MS837
+RwandAir,WB434,board,seen KGL-EBB arrival 10:20 (also marketed QR6412)
+RwandAir,WB422,board,seen KGL-EBB arrival (RWD422 on FlightAware HUEN)
+RwandAir,WB435,paired,EBB-KGL return of WB434
+RwandAir,WB423,paired,EBB-KGL return of WB422
+flynas,XY345,board,seen RUH-EBB arrival 26 Oct 2026 (32N)
+flynas,XY346,paired,EBB-RUH return of XY345
+Jambojet,JM8522,board,seen NBO-EBB arrival (JMA8522)
+Jambojet,JM8523,paired,EBB-NBO return of JM8522
+Safarilink,F283,board,seen KIS-EBB arrival (DH3)
+Safarilink,F284,paired,EBB-KIS return of F283
+Aerolink Uganda,A8112,board,seen KXO-EBB domestic arrival
+Aerolink Uganda,A8118,board,seen KSE-EBB domestic arrival
+Aerolink Uganda,A8132,board,seen domestic arrival
+Aerolink Uganda,A8113,paired,domestic return of A8112
+Aerolink Uganda,A8119,paired,domestic return of A8118
+Aerolink Uganda,A8133,paired,domestic return of A8132
+KLM,KL4164,codeshare,marketed on Kenya Airways NBO-EBB; deduped by flight id
+KLM,KL4172,codeshare,marketed on Kenya Airways NBO-EBB; deduped by flight id
+KLM,KL4188,codeshare,marketed on Kenya Airways NBO-EBB; deduped by flight id
+KLM,KL4144,codeshare,marketed on Kenya Airways EBB-NBO
+KLM,KL561,verify,AMS-EBB service - did NOT appear on Oct 2026 EBB boards; keep and re-test
+Air Tanzania,TC212,verify,not seen on Oct 2026 EBB boards - confirm or drop
+Air Tanzania,TC213,verify,not seen on Oct 2026 EBB boards - confirm or drop
+Tarco Aviation,TQQ7385,verify,seen as flight number on EBB arrival board (PZU-EBB); query form unconfirmed
+AirACT,4E5300,verify,seen on EBB arrival board from JNB (74Y freighter); operator unconfirmed
+Astral Aviation,AKS413,verify,callsign-style ident seen at EBB (BJM); operator unconfirmed
+Astral Aviation,AKS415,verify,callsign-style ident seen at EBB-NBO; operator unconfirmed
+Eagle Air Uganda,EGU7341,verify,seen on EBB arrival board from RUA; query form unconfirmed

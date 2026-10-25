@@ -276,6 +276,35 @@ async def seed_pass(client, headers, auth, seed, since: datetime, out: dict,
         await asyncio.sleep(sleep)
 
 
+def grow_seed(seed_path: Path, discovered: list[dict]) -> int:
+    """Append (airline, number) pairs the board found but the seed lacks.
+
+    The board is the only source that *discovers* carriers; the seed pass is
+    the only one that reaches further back than a couple of days. Writing the
+    board's discoveries into the seed connects the two: every day the board
+    runs, the seed gets closer to complete, and the next run backfills the new
+    numbers over the full window.
+    """
+    existing = {(n, a) for n, a in load_seed(seed_path)}
+    known_numbers = {n for n, _ in existing}
+    new = []
+    for r in discovered:
+        number, airline = r["number"].strip().upper(), (r["airline"] or "").strip()
+        if number and number not in known_numbers:
+            new.append((airline or "unknown", number))
+            known_numbers.add(number)
+    if not new:
+        return 0
+    write_header = not seed_path.exists() or seed_path.stat().st_size == 0
+    with open(seed_path, "a", newline="") as f:
+        w = csv.writer(f)
+        if write_header:
+            w.writerow(["airline", "flight_number", "confidence", "notes"])
+        for airline, number in sorted(new, key=lambda x: x[1]):
+            w.writerow([airline, number, "board", "discovered by rebuild_all.py"])
+    return len(new)
+
+
 def load_seed(path: Path) -> list[tuple[str, str]]:
     rows = list(csv.DictReader(open(path, newline="")))
     return [(r["flight_number"].strip().upper(), (r.get("airline") or "").strip())
@@ -296,6 +325,8 @@ async def main() -> None:
     ap.add_argument("--seed", default=str(ROOT / "flight_numbers_seed.csv"))
     ap.add_argument("--movements", default=str(ROOT / "data" / "movements.csv"))
     ap.add_argument("--targets", default=str(ROOT / "data" / "track_targets.csv"))
+    ap.add_argument("--grow-seed", action="store_true",
+                    help="append flight numbers discovered on the board to the seed file")
     ap.add_argument("--skip-board", action="store_true")
     ap.add_argument("--skip-seed", action="store_true")
     ap.add_argument("--sleep", type=float, default=2.0)
@@ -316,6 +347,12 @@ async def main() -> None:
         print("auth:", auth.get("message"))
         if not args.skip_board:
             await board_pass(client, headers, auth, days, out, args.sleep, args.max_pages)
+            if args.grow_seed:
+                added = grow_seed(Path(args.seed), list(out.values()))
+                print(f"\nseed grown: +{added} numbers discovered from the board")
+                if added:
+                    seed = load_seed(Path(args.seed))
+                    print(f"seed now has {len(seed)} numbers")
         if not args.skip_seed:
             await seed_pass(client, headers, auth, seed, since_dt, out, args.sleep, args.max_pages)
 
@@ -331,6 +368,16 @@ async def main() -> None:
     write_csv(Path(args.targets), ["flight_id_hex", "number", "callsign", "date",
                                    "from", "to", "airline", "aircraft"], targets)
     print(f"wrote {len(targets)} track targets (ALL flights, none filtered) -> {args.targets}")
+
+    per_day = {}
+    for r in rows:
+        per_day[r["ebb_date"]] = per_day.get(r["ebb_date"], 0) + 1
+    print("\nlegs per day:")
+    for d in sorted(per_day):
+        print(f"  {d}: {per_day[d]:>3}")
+    if per_day:
+        print(f"  average {len(rows) / len(per_day):.1f}/day "
+              f"(EBB normally sees 45-55 - lower means carriers are still missing)")
 
     carriers = sorted({r["airline"] for r in rows if r["airline"]})
     print(f"\n{len(carriers)} carriers: {', '.join(carriers) if carriers else '(none)'}")
