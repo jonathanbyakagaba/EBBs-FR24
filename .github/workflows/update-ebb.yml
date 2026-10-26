@@ -67,7 +67,7 @@ jobs:
           FR24_SUBSCRIPTION_KEY: ${{ secrets.FR24_SUBSCRIPTION_KEY }}
         run: |
           SINCE="${{ inputs.since }}"
-          if [ -z "$SINCE" ]; then SINCE=$(date -u -d '7 days ago' +%F); fi
+          if [ -z "$SINCE" ]; then SINCE=$(date -u -d '3 days ago' +%F); fi
           echo "rebuilding back to $SINCE"
           python scripts/rebuild_all.py --since "$SINCE" --grow-seed --sleep 3
 

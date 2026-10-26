@@ -223,9 +223,10 @@ async def board_pass(client, headers, auth, days, out: dict, sleep: float, max_p
                     break
                 for item in items:
                     row = board_row(item)
-                    if row and row["flight_id_hex"] not in out:
-                        out[row["flight_id_hex"]] = row
-                        added += 1
+                    if row:
+                        fresh = row["flight_id_hex"] not in out
+                        out[row["flight_id_hex"]] = row   # board wins: newest times
+                        added += 1 if fresh else 0
                 if not (node.get("page") or {}).get("more"):
                     break
                 page += 1
@@ -339,6 +340,13 @@ async def main() -> None:
     days = [since_date + timedelta(days=i) for i in range(max((today - since_date).days, 0) + 1)]
     seed = load_seed(Path(args.seed))
     out: dict[str, dict] = {}
+    # start from what is already archived - this run only re-queries a short window
+    if Path(args.movements).exists():
+        with open(args.movements, newline="") as f:
+            for r in csv.DictReader(f):
+                if r.get("flight_id_hex"):
+                    out[r["flight_id_hex"]] = r
+        print(f"loaded {len(out)} archived movements from {args.movements}")
     print(f"rebuilding from {since_date} .. {today} | {len(seed)} seed numbers")
 
     headers = get_json_headers()
