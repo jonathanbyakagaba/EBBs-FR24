@@ -3,7 +3,7 @@ name: Update Entebbe movements
 # Twice daily. The EBB airport board only reaches ~2 days back, so the
 # schedule IS the archive: a missed day is lost permanently.
 #
-# After the SECOND run of the day (16:15 EAT) it also emails a report of
+# After the SECOND run of the day (20:00 EAT) it also emails a report of
 # what was added. Secrets required:
 #   FR24_SUBSCRIPTION_KEY   the FR24 subscription key
 #   SMTP_USER / SMTP_PASS   mailbox login + app password (email only)
@@ -25,8 +25,8 @@ on:
         type: boolean
         default: true
   schedule:
-    - cron: "15 4 * * *"    # 07:15 EAT
-    - cron: "15 13 * * *"   # 16:15 EAT  <- second export; report is emailed
+    - cron: "0 3 * * *"     # 06:00 EAT
+    - cron: "0 17 * * *"    # 20:00 EAT  <- second export; report is emailed
 
 permissions:
   contents: write
@@ -98,7 +98,7 @@ jobs:
           fi
 
       - name: Email the report (second run of the day, or on demand)
-        if: ${{ (github.event_name == 'schedule' && github.event.schedule == '15 13 * * *') || inputs.email }}
+        if: ${{ (github.event_name == 'schedule' && github.event.schedule == '0 17 * * *') || inputs.email }}
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
