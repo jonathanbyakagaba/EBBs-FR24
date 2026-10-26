@@ -130,7 +130,7 @@ async def main() -> None:
                       if rec["status"] == "ok" else rec["error"] or "")
             print(f"[{i}/{len(targets)}] {rec['number']:<8} {rec['status']:<8} "
                   f"{rec['date']}  {detail}")
-            if i < len(targets):
+            if i < len(targets) and rec["status"] != "skipped":
                 await asyncio.sleep(args.delay)
 
     Path(args.manifest).parent.mkdir(parents=True, exist_ok=True)
