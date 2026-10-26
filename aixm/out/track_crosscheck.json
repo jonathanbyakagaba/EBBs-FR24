@@ -1,0 +1,102 @@
+{
+  "tracks_total": 350,
+  "tracks_with_ground_data": 332,
+  "runways": [
+    {
+      "designator": "17/35",
+      "modelled_length_m": 3679.9,
+      "ends": [
+        "17",
+        "35"
+      ]
+    },
+    {
+      "designator": "12/30",
+      "modelled_length_m": 2446.3,
+      "ends": [
+        "12",
+        "30"
+      ]
+    }
+  ],
+  "centreline_offset_m": {
+    "17/35": {
+      "n": 3026,
+      "min": 0.004893412958471381,
+      "p10": 3.404645041837852,
+      "median": 14.92094100964976,
+      "p90": 26.675070300582252,
+      "max": 29.994109202528467
+    },
+    "12/30": {
+      "n": 301,
+      "min": 0.02761625332070161,
+      "p10": 2.5282312547820003,
+      "median": 14.957714935786024,
+      "p90": 26.856640350878088,
+      "max": 29.945744322528725
+    }
+  },
+  "surface_coverage": {
+    "on_runway": {
+      "count": 3327,
+      "percent": 20.9
+    },
+    "uncovered": {
+      "count": 4170,
+      "percent": 26.2
+    },
+    "taxiway": {
+      "count": 2698,
+      "percent": 17.0
+    },
+    "apron": {
+      "count": 5710,
+      "percent": 35.9
+    }
+  },
+  "utilisation": {
+    "ARR RWY 17/35 dir 17": 146,
+    "DEP RWY 17/35 dir 17": 143,
+    "ARR RWY 17/35 dir 35": 20,
+    "DEP RWY 17/35 dir 35": 16
+  },
+  "lineup_distance_to_threshold_m": {
+    "17": {
+      "n": 143,
+      "min": 40.32641369958115,
+      "p10": 95.92938558632184,
+      "median": 380.7476796700425,
+      "p90": 528.1061541955775,
+      "max": 657.9660002217744
+    },
+    "35": {
+      "n": 16,
+      "min": 7.332975877545033,
+      "p10": 10.92318315497426,
+      "median": 16.228221994341627,
+      "p90": 28.673886681425934,
+      "max": 707.0872409516822
+    }
+  },
+  "touchdown_distance_from_threshold_m": {
+    "17": {
+      "n": 146,
+      "min": 595.6626113779887,
+      "p10": 1520.958977427239,
+      "median": 1955.005801078455,
+      "p90": 2341.5996254081388,
+      "max": 2926.8939434473336
+    },
+    "35": {
+      "n": 20,
+      "min": 613.2063058235058,
+      "p10": 1556.2107965445573,
+      "median": 1845.5236402176588,
+      "p90": 2219.0427922206545,
+      "max": 2375.6205722988843
+    }
+  },
+  "flights_touching_12_30_threshold_area": 100,
+  "summary_markdown": "`tracks/` holds **350** flights; **332** contain ground-level positions at Entebbe (altitude < 60 ft within 25 km of the ARP). Those positions were compared with the geometry in the AIXM message.\n\n### 6.1 Runway centreline agreement\n\n| runway | modelled length (M) | ground points on centreline | median offset | p90 offset |\n|---|---|---|---|---|\n| 17/35 | 3680 | 3026 | 14.9 m | 26.7 m |\n| 12/30 | 2446 | 301 | 15.0 m | 26.9 m |\n\nA median offset of a few metres means the published threshold coordinates and the runway bearings in the data set describe the pavement aircraft actually use. Offsets are lateral distance to the modelled centreline, counted only for points within 30 m of it.\n\n### 6.2 Runway and direction in use\n\n| usage | movements |\n|---|---|\n| ARR RWY 17/35 dir 17 | 146 |\n| DEP RWY 17/35 dir 17 | 143 |\n| ARR RWY 17/35 dir 35 | 20 |\n| DEP RWY 17/35 dir 35 | 16 |\n\n### 6.3 Departure line-up and arrival touchdown vs modelled thresholds\n\n| runway direction | phase | n | median distance from THR | p90 |\n|---|---|---|---|---|\n| 17 | departure line-up | 143 | 381 m | 528 m |\n| 35 | departure line-up | 16 | 16 m | 29 m |\n| 17 | first ground point (arrival) | 146 | 1955 m | 2342 m |\n| 35 | first ground point (arrival) | 20 | 1846 m | 2219 m |\n\nA departure line-up close to the threshold corroborates the threshold position; a larger value indicates an intersection departure. The arrival figure is the first *reported* ground position, which FR24 playback samples coarsely, so it is an upper bound on touchdown distance rather than a touchdown measurement.\n\nRunway 12/30 never appears as the runway in use in any analysed track, although 100 flights taxi close enough to its centreline to register points on it. Combined with the aerodrome chart legend, that suggests 12/30 is not in routine use; confirm against the AIP.\n\n### 6.4 Coverage of the derived apron/taxiway surfaces\n\n| classification of ground points | count | share |\n|---|---|---|\n| apron | 5710 | 35.9% |\n| uncovered | 4170 | 26.2% |\n| on_runway | 3327 | 20.9% |\n| taxiway | 2698 | 17.0% |\n\n**26.2%** of observed ground movement falls outside every modelled surface. That is the honest measure of how incomplete the derived taxiway and apron network is: aircraft also use links, holding bays and stand taxilanes that no accessible source describes.\n"
+}

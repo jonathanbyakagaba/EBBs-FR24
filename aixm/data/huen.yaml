@@ -1,0 +1,329 @@
+# =============================================================================
+# HUEN / ENTEBBE INTERNATIONAL AIRPORT - AIXM 5.1.1 source of truth
+# =============================================================================
+# This file is the single input for scripts/build_aixm.py. Edit here, rebuild;
+# never hand-edit out/HUEN_AIP_DS.xml.
+#
+# Every value carries a provenance tag. Where a value is a plain scalar it
+# inherits the `_source` of its block. To override, write:
+#     field: {value: 123, source: tracks, confidence: derived, note: "..."}
+# confidence: published | derived | assumed   (see README "Confidence" section)
+#
+# Nothing here is official AIS data. It is an analysis-grade model assembled
+# from open sources that were reachable from the build environment; the
+# Ugandan AIP (AD 2 HUEN) remains the authoritative source.
+# =============================================================================
+
+dataset:
+  title: "HUEN - ENTEBBE INTERNATIONAL AIRPORT - aerodrome (AD 2 scope)"
+  abstract: >-
+    AIXM 5.1.1 aerodrome data set for Entebbe International Airport, covering
+    the aerodrome, runways and runway directions, landing thresholds and
+    declared distances, taxiway and apron areas, radio navigation aids,
+    communication channels and aerodrome services. Assembled from open
+    data; geometry for taxiways and aprons is derived from observed aircraft
+    ground tracks held in this repository. Not for operational use.
+  location_indicator: HUEN
+  # Baseline validTime begins here. Rebuild with a new date for a new AIRAC-ish
+  # baseline; the generator does not model temporality beyond a BASELINE slice.
+  effective: "2026-10-26T00:00:00Z"
+  language: eng
+  publisher: "EBBs-FR24 (analysis project, unaffiliated with Uganda CAA)"
+
+# -----------------------------------------------------------------------------
+# Provenance registry. Referenced by `source:` keys below.
+# -----------------------------------------------------------------------------
+sources:
+  ourairports:
+    name: "OurAirports open data set (airports/runways/navaids/frequencies)"
+    url: "https://github.com/davidmegginson/ourairports-data"
+    retrieved: "2026-10-26"
+    note: >-
+      Runway end coordinates, headings, elevations and navaid positions.
+      OurAirports is DAFIF-derived and community-corrected; end coordinates
+      are rounded to ~4 decimal places (~11 m), so lengths derived from them
+      differ slightly from published runway lengths.
+  dafif:
+    name: "DAFIF figures as republished (Airports Worldwide, SkyVector)"
+    url: "https://www.airports-worldwide.com/uganda/entebbe_intl_uganda.php"
+    retrieved: "2026-10-26"
+  chart:
+    name: "HUEN aerodrome/AD 2 chart extract (declared distances, RFF, hours)"
+    url: "https://virtualairlines.eu/charts/HUEN.pdf"
+    retrieved: "2026-10-26"
+    note: >-
+      Secondary reproduction of the AIP AD 2.13 table and aerodrome chart.
+      Used for declared distances, RFF category and H24 hours.
+  tracks:
+    name: "FR24 position tracks in this repository (tracks/, 350 flights)"
+    url: "https://github.com/jonathanbyakagaba/EBBs-FR24"
+    retrieved: "2026-10-26"
+    note: >-
+      Ground-level track points used to (a) verify the runway centrelines
+      against published coordinates, (b) derive the east-side parallel
+      taxiway offset and (c) derive apron envelopes. See
+      scripts/track_crosscheck.py and out/track_crosscheck.md.
+  wmm:
+    name: "World Magnetic Model estimate for the ARP"
+    retrieved: "2026-10-26"
+    note: >-
+      Sources disagree on the declination at HUEN: DAFIF (2006) 0.0, a
+      WMM2020-derived service 1.4 E (Jun 2026), another 1.7 E (2026), and the
+      published magnetic runway headings imply ~2 E. Modelled as 1.0 E with
+      wide accuracy and flagged in the validation report.
+
+# -----------------------------------------------------------------------------
+# Aerodrome
+# -----------------------------------------------------------------------------
+airport:
+  _source: ourairports
+  icao: HUEN
+  iata: EBB
+  name: ENTEBBE INTERNATIONAL AIRPORT
+  type: AD
+  # CodeMilitaryOperationsType: CIVIL | MIL | JOINT. Entebbe is joint civil and
+  # military use (Entebbe Air Base shares the field).
+  control_type: {value: JOINT, source: ourairports, confidence: published}
+  certified_icao: "YES"   # quoted: YAML 1.1 would read YES as boolean
+  # 3782 ft = 1152.8 m; published to the metre as 1153 m.
+  field_elevation_m: 1153
+  field_elevation_accuracy_m: 3.0
+  magnetic_variation_deg: {value: 1.0, source: wmm, confidence: assumed}
+  magnetic_variation_accuracy_deg: 0.7
+  magnetic_variation_date: 2026
+  arp: {lat: 0.042386, lon: 32.443501}
+  served_city: ENTEBBE
+  rff_category: {value: A9, source: chart, confidence: published}
+  rff_standard: ICAO
+  operator: {value: UGANDA CIVIL AVIATION AUTHORITY, source: ourairports, confidence: published}
+  operating_hours: {value: H24, source: chart, confidence: published}
+  # Note: 12/30 is the secondary runway; the aerodrome chart carries the legend
+  # "RWY 12/30 ONLY AVAIL ..." - see out/HUEN_validation_report.md.
+  remarks:
+    - "Aerodrome elevation 1153 M (3782 FT). Magnetic variation is uncertain (0.0-2.0 E across sources)."
+    - "ILS is reported on runway 17 (DAFIF); ident/frequency not available in an accessible source, so no ILS navaid is modelled."
+
+# -----------------------------------------------------------------------------
+# Runways. `ends` are the physical runway extremities (THR positions when the
+# threshold is not displaced). true_bearing is the published value; the
+# generator additionally computes the geodesic bearing between the two ends and
+# reports the difference, which is a check on the coordinates themselves.
+# -----------------------------------------------------------------------------
+runways:
+  - designator: "17/35"
+    _source: ourairports
+    type: RWY
+    nominal_length_m: {value: 3658, source: dafif, confidence: published}
+    nominal_width_m: {value: 46, source: dafif, confidence: published}
+    composition: ASPH
+    ends:
+      "17":
+        lat: 0.055597
+        lon: 32.435902
+        elevation_ft: 3780
+        true_bearing: {value: 171.0, source: ourairports}
+        magnetic_bearing: {value: 169, source: ourairports}
+        approach_marking: PRECISION
+        precision_approach: {value: ILS_PRECISION_CAT_I, source: dafif, confidence: assumed}
+        declared: {TORA: 3658, TODA: 3658, ASDA: 3658, LDA: 3658}
+      "35":
+        lat: 0.022914
+        lon: 32.441101
+        elevation_ft: 3745
+        true_bearing: {value: 351.0, source: ourairports}
+        magnetic_bearing: {value: 349, source: ourairports}
+        approach_marking: NONPRECISION
+        declared: {TORA: 3658, TODA: 3658, ASDA: 3658, LDA: 3658}
+  - designator: "12/30"
+    _source: ourairports
+    type: RWY
+    nominal_length_m: {value: 2408, source: dafif, confidence: published}
+    nominal_width_m: {value: 46, source: dafif, confidence: published}
+    composition: ASPH
+    ends:
+      "12":
+        lat: 0.051228
+        lon: 32.439098
+        elevation_ft: 3778
+        true_bearing: {value: 121.0, source: ourairports}
+        magnetic_bearing: {value: 119, source: ourairports}
+        approach_marking: NONPRECISION
+        # Published LDA is 652 m shorter than the TORA for this direction and
+        # the source does not state a displaced threshold. Encoded as published
+        # (no DISTHR is invented); flagged by the validator.
+        declared:
+          TORA: {value: 2400, source: chart}
+          TODA: {value: 2400, source: chart}
+          ASDA: {value: 2400, source: chart}
+          LDA:  {value: 1748, source: chart, confidence: assumed,
+                 note: "LDA 1748 m vs TORA 2400 m with no published displaced threshold."}
+      "30":
+        lat: 0.039806
+        lon: 32.457901
+        elevation_ft: 3752
+        true_bearing: {value: 301.0, source: ourairports}
+        magnetic_bearing: {value: 299, source: ourairports}
+        approach_marking: NONPRECISION
+        declared: {TORA: 2400, TODA: 2400, ASDA: 2400, LDA: 2400}
+
+# -----------------------------------------------------------------------------
+# Radio navigation aids
+# -----------------------------------------------------------------------------
+navaids:
+  - designator: NN
+    _source: ourairports
+    type: VOR_DME
+    name: ENTEBBE
+    purpose: {value: ALL, source: ourairports, confidence: assumed,
+              note: "OurAirports gives usageType BOTH; AIXM has TERMINAL/ENROUTE/ALL."}
+    lat: 0.052997
+    lon: 32.437999
+    elevation_ft: 3782
+    magnetic_variation_deg: 0.376
+    components:
+      - kind: VOR
+        designator: NN
+        type: VOR
+        frequency_mhz: 117.500
+      - kind: DME
+        designator: NN
+        channel: 122X
+        frequency_mhz: 117.500
+        # DME is co-located: no separate DME position is published.
+        colocated_with_vor: true
+  - designator: EM
+    _source: ourairports
+    type: NDB
+    name: ENTEBBE
+    # 15 km NNW of the ARP: an off-aerodrome aid, so no servedAirport link.
+    serves_aerodrome: false
+    lat: 0.138594
+    lon: 32.424702
+    # emission band omitted: the AIXM code is band-U/H/M and 355 kHz does not
+    # map unambiguously from the source data.
+    frequency_khz: 355
+  - designator: PB
+    _source: ourairports
+    type: NDB
+    name: PORT BELL
+    # 33 km east of the ARP: an en-route aid, included because the source
+    # associates it with HUEN, but it does not serve the aerodrome.
+    serves_aerodrome: false
+    lat: 0.295775
+    lon: 32.655998
+    frequency_khz: 270
+
+# -----------------------------------------------------------------------------
+# Communication channels. 118.1 TWR and 119.1 APP come from DAFIF; 126.6 APP
+# and 128.5 ACC from OurAirports. The two APP figures disagree - both are
+# encoded, each flagged.
+# -----------------------------------------------------------------------------
+radio_channels:
+  - key: TWR
+    frequency_mhz: {value: 118.1, source: ourairports, confidence: published}
+    callsign: ENTEBBE TOWER
+  - key: APP_RADAR
+    frequency_mhz: {value: 126.6, source: ourairports, confidence: published}
+    callsign: ENTEBBE RADAR CONTROL
+  - key: APP_DAFIF
+    frequency_mhz: {value: 119.1, source: dafif, confidence: assumed,
+                    note: "DAFIF lists APP 119.1 as 'opr unrel'; may be stale or an alternate sector."}
+    callsign: ENTEBBE APPROACH
+  - key: ACC
+    frequency_mhz: {value: 128.5, source: ourairports, confidence: published}
+    callsign: EBB AREA CONTROL
+
+# -----------------------------------------------------------------------------
+# Services
+# -----------------------------------------------------------------------------
+services:
+  - key: TWR
+    kind: ATC
+    type: TWR
+    name: ENTEBBE TOWER
+    callsign: ENTEBBE TOWER
+    provider_unit: EBBTWR
+    channel: TWR
+    hours: H24
+    rank: PRIMARY
+  - key: APP
+    kind: ATC
+    type: APP
+    name: ENTEBBE APPROACH
+    callsign: ENTEBBE APPROACH
+    provider_unit: EBBAPP
+    channel: APP_RADAR
+    hours: H24
+    rank: PRIMARY
+  - key: FFS
+    kind: FIRE_FIGHTING
+    name: ENTEBBE FIRE AND RESCUE
+    hours: H24
+
+# `designator` is the short organisation code (CodeOrganisationDesignatorType:
+# max 12 chars, pattern [A-Z0-9] with space/+/-/ separators); `name` is the ATS unit name.
+units:
+  - designator: EBBTWR
+    name: ENTEBBE TOWER
+    type: TWR
+  - designator: EBBAPP
+    name: ENTEBBE APPROACH
+    type: APP
+
+# -----------------------------------------------------------------------------
+# Taxiways - DERIVED. No taxiway designator or pavement survey was available in
+# the accessible sources, so the network is a geometric skeleton reconstructed
+# from the observed ground tracks: a parallel taxiway 180 m east of the 17/35
+# centreline (median offset of 4 694 observed ground points) plus link stubs at
+# each end and to the main apron. Designators are omitted rather than invented.
+# -----------------------------------------------------------------------------
+taxiways:
+  - key: PARALLEL
+    _source: tracks
+    confidence: derived
+    width_m: 23
+    composition: ASPH
+    polyline: [[0.055497, 32.437555], [0.023529, 32.442641]]
+    note: "East-side parallel taxiway; 180 m from the 17/35 centreline, spanning lat 0.0235-0.0555."
+  - key: LINK_NORTH
+    _source: tracks
+    confidence: derived
+    width_m: 23
+    composition: ASPH
+    polyline: [[0.054582, 32.436427], [0.054783, 32.437669]]
+    note: "Link between the runway 17 end area and the parallel taxiway."
+  - key: LINK_SOUTH
+    _source: tracks
+    confidence: derived
+    width_m: 23
+    composition: ASPH
+    polyline: [[0.024429, 32.441406], [0.024601, 32.442470]]
+    note: "Link between the runway 35 end area and the parallel taxiway."
+  - key: LINK_APRON
+    _source: tracks
+    confidence: derived
+    width_m: 23
+    composition: ASPH
+    polyline: [[0.049788, 32.441921], [0.049244, 32.438550]]
+    note: "Link between the main apron and the parallel taxiway."
+
+# -----------------------------------------------------------------------------
+# Aprons - DERIVED. Envelopes of observed aircraft ground positions 260-1200 m
+# from the 17/35 centreline, grown by 25-40 m and aligned to the runway grid.
+# These are not pavement outlines.
+# -----------------------------------------------------------------------------
+aprons:
+  - key: MAIN
+    _source: tracks
+    confidence: derived
+    name: MAIN APRON
+    composition: ASPH
+    polygon: [[0.050178, 32.438812], [0.041654, 32.440167], [0.042120, 32.443057], [0.050644, 32.441701]]
+    note: "Envelope of 4 181 observed ground positions; approx. 950 x 325 m east of runway 17/35, abeam the terminal."
+  - key: NORTH
+    _source: tracks
+    confidence: derived
+    name: NORTH APRON
+    composition: ASPH
+    polygon: [[0.053814, 32.438324], [0.049617, 32.438992], [0.049848, 32.440419], [0.054044, 32.439752]]
+    note: "Envelope of 1 669 observed ground positions north of the main apron; purpose (cargo/military) not established."

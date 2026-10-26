@@ -1,0 +1,65 @@
+name: Validate HUEN AIXM data set
+
+# Rebuilds the AIXM 5.1.1 aerodrome data set from aixm/data/huen.yaml, re-runs
+# the flight-track cross-check and validates the result against the official
+# AIXM 5.1.1 schemas (vendored in aixm/schema/).
+#
+# Fails the build if the message does not validate or if any ERROR-level
+# domain check is raised. No secrets are required.
+
+on:
+  push:
+    paths:
+      - "aixm/**"
+      - ".github/workflows/aixm-validate.yml"
+  pull_request:
+    paths:
+      - "aixm/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r aixm/requirements.txt
+
+      - name: Build AIXM message
+        working-directory: aixm
+        run: python scripts/build_aixm.py
+
+      - name: Cross-check against flight tracks
+        working-directory: aixm
+        run: python scripts/track_crosscheck.py
+
+      - name: Validate (schema + domain checks)
+        working-directory: aixm
+        run: python scripts/validate_aixm.py
+
+      - name: Upload report and data set
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: huen-aixm
+          path: |
+            aixm/out/HUEN_AIP_DS.xml
+            aixm/out/HUEN_validation_report.md
+            aixm/out/track_crosscheck.json
+            aixm/out/build_manifest.json
+          if-no-files-found: warn
+
+      - name: Fail if the generated data set is stale
+        run: |
+          if ! git diff --quiet -- aixm/out; then
+            echo "::warning::out/ changed when rebuilt — commit the regenerated AIXM output"
+            git diff --stat -- aixm/out
+          fi

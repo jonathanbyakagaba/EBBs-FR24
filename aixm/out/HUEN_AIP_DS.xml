@@ -1,0 +1,2230 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message" xmlns:aixm="http://www.aixm.aero/schema/5.1.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="M_HUEN" xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd">
+  <gml:boundedBy>
+    <gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
+      <gml:lowerCorner>-0.027118912 32.374702000</gml:lowerCorner>
+      <gml:upperCorner>0.345775000 32.705998000</gml:upperCorner>
+    </gml:Envelope>
+  </gml:boundedBy>
+  <aixm:messageMetadata>
+    <gmd:MD_Metadata id="MD_HUEN">
+      <gmd:characterSet>
+        <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">utf8</gmd:MD_CharacterSetCode>
+      </gmd:characterSet>
+      <gmd:contact>
+        <gmd:CI_ResponsibleParty>
+          <gmd:organisationName>
+            <gco:CharacterString>EBBs-FR24 (analysis project, unaffiliated with Uganda CAA)</gco:CharacterString>
+          </gmd:organisationName>
+          <gmd:role>
+            <gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator">originator</gmd:CI_RoleCode>
+          </gmd:role>
+        </gmd:CI_ResponsibleParty>
+      </gmd:contact>
+      <gmd:dateStamp>
+        <gco:DateTime>2026-10-26T00:00:00Z</gco:DateTime>
+      </gmd:dateStamp>
+      <gmd:identificationInfo>
+        <gmd:MD_DataIdentification>
+          <gmd:citation>
+            <gmd:CI_Citation>
+              <gmd:title>
+                <gco:CharacterString>HUEN - ENTEBBE INTERNATIONAL AIRPORT - aerodrome (AD 2 scope)</gco:CharacterString>
+              </gmd:title>
+              <gmd:date>
+                <gmd:CI_Date>
+                  <gmd:date>
+                    <gco:Date>2026-10-26</gco:Date>
+                  </gmd:date>
+                  <gmd:dateType>
+                    <gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+                  </gmd:dateType>
+                </gmd:CI_Date>
+              </gmd:date>
+            </gmd:CI_Citation>
+          </gmd:citation>
+          <gmd:abstract>
+            <gco:CharacterString>AIXM 5.1.1 aerodrome data set for Entebbe International Airport, covering the aerodrome, runways and runway directions, landing thresholds and declared distances, taxiway and apron areas, radio navigation aids, communication channels and aerodrome services. Assembled from open data; geometry for taxiways and aprons is derived from observed aircraft ground tracks held in this repository. Not for operational use.</gco:CharacterString>
+          </gmd:abstract>
+          <gmd:language>
+            <gco:CharacterString>eng</gco:CharacterString>
+          </gmd:language>
+          <gmd:topicCategory>
+            <gmd:MD_TopicCategoryCode>transportation</gmd:MD_TopicCategoryCode>
+          </gmd:topicCategory>
+          <gmd:extent>
+            <gmd:EX_Extent>
+              <gmd:geographicElement>
+                <gmd:EX_GeographicBoundingBox>
+                  <gmd:westBoundLongitude>
+                    <gco:Decimal>32.424702000</gco:Decimal>
+                  </gmd:westBoundLongitude>
+                  <gmd:eastBoundLongitude>
+                    <gco:Decimal>32.655998000</gco:Decimal>
+                  </gmd:eastBoundLongitude>
+                  <gmd:southBoundLatitude>
+                    <gco:Decimal>0.022881088</gco:Decimal>
+                  </gmd:southBoundLatitude>
+                  <gmd:northBoundLatitude>
+                    <gco:Decimal>0.295775000</gco:Decimal>
+                  </gmd:northBoundLatitude>
+                </gmd:EX_GeographicBoundingBox>
+              </gmd:geographicElement>
+            </gmd:EX_Extent>
+          </gmd:extent>
+        </gmd:MD_DataIdentification>
+      </gmd:identificationInfo>
+    </gmd:MD_Metadata>
+  </aixm:messageMetadata>
+  <message:hasMember>
+    <aixm:AirportHeliport gml:id="uuid.c69cb32f-504c-55e6-8e42-37f747da01ad">
+      <gml:identifier codeSpace="urn:uuid:">c69cb32f-504c-55e6-8e42-37f747da01ad</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirportHeliportTimeSlice gml:id="AHP_HUEN">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_AHP_HUEN">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_AHP_HUEN">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>HUEN</aixm:designator>
+          <aixm:name>ENTEBBE INTERNATIONAL AIRPORT</aixm:name>
+          <aixm:locationIndicatorICAO>HUEN</aixm:locationIndicatorICAO>
+          <aixm:designatorIATA>EBB</aixm:designatorIATA>
+          <aixm:type>AD</aixm:type>
+          <aixm:certifiedICAO>YES</aixm:certifiedICAO>
+          <aixm:controlType>JOINT</aixm:controlType>
+          <aixm:fieldElevation uom="M">1153</aixm:fieldElevation>
+          <aixm:fieldElevationAccuracy uom="M">3.0</aixm:fieldElevationAccuracy>
+          <aixm:magneticVariation>1.0</aixm:magneticVariation>
+          <aixm:magneticVariationAccuracy>0.7</aixm:magneticVariationAccuracy>
+          <aixm:dateMagneticVariation>2026</aixm:dateMagneticVariation>
+          <aixm:servedCity>
+            <aixm:City gml:id="city_ENTEBBE">
+              <aixm:name>ENTEBBE</aixm:name>
+            </aixm:City>
+          </aixm:servedCity>
+          <aixm:responsibleOrganisation>
+            <aixm:AirportHeliportResponsibilityOrganisation gml:id="aro_AHP_HUEN">
+              <aixm:role>OPERATE</aixm:role>
+              <aixm:theOrganisationAuthority xlink:href="urn:uuid:3f84ba11-7ed6-5bc0-b314-3befc8063cf9" xlink:title="UGANDA CIVIL AVIATION AUTHORITY"/>
+            </aixm:AirportHeliportResponsibilityOrganisation>
+          </aixm:responsibleOrganisation>
+          <aixm:ARP>
+            <aixm:ElevatedPoint gml:id="geo_AHP_HUEN_ARP" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.042386000 32.443501000</gml:pos>
+              <aixm:horizontalAccuracy uom="M">3.0</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">1153</aixm:elevation>
+            </aixm:ElevatedPoint>
+          </aixm:ARP>
+          <aixm:availability>
+            <aixm:AirportHeliportAvailability gml:id="av_AHP_HUEN">
+              <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+            </aixm:AirportHeliportAvailability>
+          </aixm:availability>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_AHP_HUEN_1">
+              <aixm:propertyName>availability</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_AHP_HUEN_1">
+                  <aixm:note>Aerodrome operating hours: {'value': 'H24', 'source': 'chart', 'confidence': 'published'}.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_AHP_HUEN_2">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_AHP_HUEN_2">
+                  <aixm:note>Aerodrome elevation 1153 M (3782 FT). Magnetic variation is uncertain (0.0-2.0 E across sources).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_AHP_HUEN_3">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_AHP_HUEN_3">
+                  <aixm:note>ILS is reported on runway 17 (DAFIF); ident/frequency not available in an accessible source, so no ILS navaid is modelled.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_AHP_HUEN_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_AHP_HUEN_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). Third-party open data; the Uganda AIP AD 2 HUEN remains authoritative.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:AirportHeliportTimeSlice>
+      </aixm:timeSlice>
+    </aixm:AirportHeliport>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:OrganisationAuthority gml:id="uuid.3f84ba11-7ed6-5bc0-b314-3befc8063cf9">
+      <gml:identifier codeSpace="urn:uuid:">3f84ba11-7ed6-5bc0-b314-3befc8063cf9</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:OrganisationAuthorityTimeSlice gml:id="ORG_UGANDA_CIVIL_AVIATION_AUTHORITY">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_ORG_UGANDA_CIVIL_AVIATION_AUTHORITY">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_ORG_UGANDA_CIVIL_AVIATION_AUTHORITY">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>UGANDA CIVIL AVIATION AUTHORITY</aixm:name>
+          <aixm:type>NTL_AUTH</aixm:type>
+          <aixm:military>CIVIL</aixm:military>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_ORG_UGANDA_CIVIL_AVIATION_AUTHORITY_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_ORG_UGANDA_CIVIL_AVIATION_AUTHORITY_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:OrganisationAuthorityTimeSlice>
+      </aixm:timeSlice>
+    </aixm:OrganisationAuthority>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Runway gml:id="uuid.e65ff47d-6c2d-5fd8-9dd2-d1deee7b14c2">
+      <gml:identifier codeSpace="urn:uuid:">e65ff47d-6c2d-5fd8-9dd2-d1deee7b14c2</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayTimeSlice gml:id="RWY_17_35">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RWY_17_35">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RWY_17_35">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>17/35</aixm:designator>
+          <aixm:type>RWY</aixm:type>
+          <aixm:nominalLength uom="M">3658</aixm:nominalLength>
+          <aixm:nominalWidth uom="M">46</aixm:nominalWidth>
+          <aixm:surfaceProperties>
+            <aixm:SurfaceCharacteristics gml:id="sc_RWY_17_35">
+              <aixm:composition>ASPH</aixm:composition>
+            </aixm:SurfaceCharacteristics>
+          </aixm:surfaceProperties>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RWY_17_35_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RWY_17_35_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). Derived geodesic length between published end coordinates is 3680 M vs published nominal length 3658 M.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Runway>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayElement gml:id="uuid.9152da89-5b7f-56d4-b16c-3107fec782be">
+      <gml:identifier codeSpace="urn:uuid:">9152da89-5b7f-56d4-b16c-3107fec782be</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayElementTimeSlice gml:id="RWY_17_35_ELEMENT">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RWY_17_35_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RWY_17_35_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>NORMAL</aixm:type>
+          <aixm:length uom="M">3679.9</aixm:length>
+          <aixm:width uom="M">46</aixm:width>
+          <aixm:associatedRunway xlink:href="urn:uuid:e65ff47d-6c2d-5fd8-9dd2-d1deee7b14c2" xlink:title="17/35"/>
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="sfc_RWY_17_35_ELEMENT" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <gml:Curve gml:id="crv_RWY_17_35_ELEMENT">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>0.055629912 32.436106011
+0.022946912 32.441305011
+0.022881088 32.440896989
+0.055564088 32.435697989
+0.055629912 32.436106011</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </gml:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+              <aixm:elevation uom="M">1146.8</aixm:elevation>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RWY_17_35_ELEMENT_1">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RWY_17_35_ELEMENT_1">
+                  <aixm:note>Pavement outline generated by buffering the published runway end coordinates to the published runway width; it is a model artefact, not a surveyed pavement boundary.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RWY_17_35_ELEMENT_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RWY_17_35_ELEMENT_90">
+                  <aixm:note>Provenance: derived; source: OurAirports open data set (airports/runways/navaids/frequencies). Geometry is a buffer of published threshold coordinates, not a surveyed pavement boundary.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayElement>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayDirection gml:id="uuid.59d074bc-db32-52dc-a00a-0001681dbe43">
+      <gml:identifier codeSpace="urn:uuid:">59d074bc-db32-52dc-a00a-0001681dbe43</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_17_35_17">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RDN_17_35_17">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RDN_17_35_17">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>17</aixm:designator>
+          <aixm:trueBearing>171.0</aixm:trueBearing>
+          <aixm:magneticBearing>169</aixm:magneticBearing>
+          <aixm:approachMarkingType>PRECISION</aixm:approachMarkingType>
+          <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
+          <aixm:precisionApproachGuidance>ILS_PRECISION_CAT_I</aixm:precisionApproachGuidance>
+          <aixm:usedRunway xlink:href="urn:uuid:e65ff47d-6c2d-5fd8-9dd2-d1deee7b14c2" xlink:title="17/35"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RDN_17_35_17_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RDN_17_35_17_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). Geodesic bearing between published end coordinates is 170.96 DEG T, i.e. +0.04 DEG from the published true bearing.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayDirectionTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayDirection>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.0d3e01f2-6d9f-59a8-bac8-92a75c90405f">
+      <gml:identifier codeSpace="urn:uuid:">0d3e01f2-6d9f-59a8-bac8-92a75c90405f</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="RCP_17_35_17">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RCP_17_35_17">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RCP_17_35_17">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:role>THR</aixm:role>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="geo_RCP_17_35_17" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.055597000 32.435902000</gml:pos>
+              <aixm:horizontalAccuracy uom="M">3.0</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">1152.1</aixm:elevation>
+              <aixm:verticalAccuracy uom="M">3.0</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:onRunway xlink:href="urn:uuid:59d074bc-db32-52dc-a00a-0001681dbe43" xlink:title="17"/>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_17_35_17_TORA">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_17_35_17_TORA">
+                  <aixm:distance uom="M">3658</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_17_35_17_TODA">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_17_35_17_TODA">
+                  <aixm:distance uom="M">3658</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_17_35_17_ASDA">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_17_35_17_ASDA">
+                  <aixm:distance uom="M">3658</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_17_35_17_LDA">
+              <aixm:type>LDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_17_35_17_LDA">
+                  <aixm:distance uom="M">3658</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RCP_17_35_17_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RCP_17_35_17_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayDirection gml:id="uuid.dab7e110-046b-5d7f-814d-031d4ba2f80e">
+      <gml:identifier codeSpace="urn:uuid:">dab7e110-046b-5d7f-814d-031d4ba2f80e</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_17_35_35">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RDN_17_35_35">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RDN_17_35_35">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>35</aixm:designator>
+          <aixm:trueBearing>351.0</aixm:trueBearing>
+          <aixm:magneticBearing>349</aixm:magneticBearing>
+          <aixm:approachMarkingType>NONPRECISION</aixm:approachMarkingType>
+          <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
+          <aixm:usedRunway xlink:href="urn:uuid:e65ff47d-6c2d-5fd8-9dd2-d1deee7b14c2" xlink:title="17/35"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RDN_17_35_35_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RDN_17_35_35_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). Geodesic bearing between published end coordinates is 350.96 DEG T, i.e. +0.04 DEG from the published true bearing.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayDirectionTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayDirection>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.362e8a37-670b-5fbf-8320-912560b29ee4">
+      <gml:identifier codeSpace="urn:uuid:">362e8a37-670b-5fbf-8320-912560b29ee4</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="RCP_17_35_35">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RCP_17_35_35">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RCP_17_35_35">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:role>THR</aixm:role>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="geo_RCP_17_35_35" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.022914000 32.441101000</gml:pos>
+              <aixm:horizontalAccuracy uom="M">3.0</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">1141.5</aixm:elevation>
+              <aixm:verticalAccuracy uom="M">3.0</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:onRunway xlink:href="urn:uuid:dab7e110-046b-5d7f-814d-031d4ba2f80e" xlink:title="35"/>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_17_35_35_TORA">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_17_35_35_TORA">
+                  <aixm:distance uom="M">3658</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_17_35_35_TODA">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_17_35_35_TODA">
+                  <aixm:distance uom="M">3658</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_17_35_35_ASDA">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_17_35_35_ASDA">
+                  <aixm:distance uom="M">3658</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_17_35_35_LDA">
+              <aixm:type>LDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_17_35_35_LDA">
+                  <aixm:distance uom="M">3658</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RCP_17_35_35_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RCP_17_35_35_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Runway gml:id="uuid.2fd97fde-95cd-5787-a125-c63a962255cd">
+      <gml:identifier codeSpace="urn:uuid:">2fd97fde-95cd-5787-a125-c63a962255cd</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayTimeSlice gml:id="RWY_12_30">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RWY_12_30">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RWY_12_30">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>12/30</aixm:designator>
+          <aixm:type>RWY</aixm:type>
+          <aixm:nominalLength uom="M">2408</aixm:nominalLength>
+          <aixm:nominalWidth uom="M">46</aixm:nominalWidth>
+          <aixm:surfaceProperties>
+            <aixm:SurfaceCharacteristics gml:id="sc_RWY_12_30">
+              <aixm:composition>ASPH</aixm:composition>
+            </aixm:SurfaceCharacteristics>
+          </aixm:surfaceProperties>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RWY_12_30_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RWY_12_30_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). Derived geodesic length between published end coordinates is 2446 M vs published nominal length 2408 M.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Runway>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayElement gml:id="uuid.21034930-9e1c-54ad-99df-dc4d3f827cde">
+      <gml:identifier codeSpace="urn:uuid:">21034930-9e1c-54ad-99df-dc4d3f827cde</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayElementTimeSlice gml:id="RWY_12_30_ELEMENT">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RWY_12_30_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RWY_12_30_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>NORMAL</aixm:type>
+          <aixm:length uom="M">2446.3</aixm:length>
+          <aixm:width uom="M">46</aixm:width>
+          <aixm:associatedRunway xlink:href="urn:uuid:2fd97fde-95cd-5787-a125-c63a962255cd" xlink:title="12/30"/>
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="sfc_RWY_12_30_ELEMENT" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <gml:Curve gml:id="crv_RWY_12_30_ELEMENT">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>0.051406166 32.439204717
+0.039984166 32.458007717
+0.039627834 32.457794283
+0.051049834 32.438991283
+0.051406166 32.439204717</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </gml:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+              <aixm:elevation uom="M">1147.6</aixm:elevation>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RWY_12_30_ELEMENT_1">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RWY_12_30_ELEMENT_1">
+                  <aixm:note>Pavement outline generated by buffering the published runway end coordinates to the published runway width; it is a model artefact, not a surveyed pavement boundary.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RWY_12_30_ELEMENT_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RWY_12_30_ELEMENT_90">
+                  <aixm:note>Provenance: derived; source: OurAirports open data set (airports/runways/navaids/frequencies). Geometry is a buffer of published threshold coordinates, not a surveyed pavement boundary.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayElement>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayDirection gml:id="uuid.966a407f-c6d2-5341-9169-fd780dbf5bb7">
+      <gml:identifier codeSpace="urn:uuid:">966a407f-c6d2-5341-9169-fd780dbf5bb7</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_12_30_12">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RDN_12_30_12">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RDN_12_30_12">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>12</aixm:designator>
+          <aixm:trueBearing>121.0</aixm:trueBearing>
+          <aixm:magneticBearing>119</aixm:magneticBearing>
+          <aixm:approachMarkingType>NONPRECISION</aixm:approachMarkingType>
+          <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
+          <aixm:usedRunway xlink:href="urn:uuid:2fd97fde-95cd-5787-a125-c63a962255cd" xlink:title="12/30"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RDN_12_30_12_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RDN_12_30_12_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). Geodesic bearing between published end coordinates is 121.28 DEG T, i.e. -0.28 DEG from the published true bearing.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayDirectionTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayDirection>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.f3501bd5-33ec-5a61-9a00-a683313870db">
+      <gml:identifier codeSpace="urn:uuid:">f3501bd5-33ec-5a61-9a00-a683313870db</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="RCP_12_30_12">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RCP_12_30_12">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RCP_12_30_12">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:role>THR</aixm:role>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="geo_RCP_12_30_12" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.051228000 32.439098000</gml:pos>
+              <aixm:horizontalAccuracy uom="M">3.0</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">1151.5</aixm:elevation>
+              <aixm:verticalAccuracy uom="M">3.0</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:onRunway xlink:href="urn:uuid:966a407f-c6d2-5341-9169-fd780dbf5bb7" xlink:title="12"/>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_12_30_12_TORA">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_12_30_12_TORA">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_12_30_12_TODA">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_12_30_12_TODA">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_12_30_12_ASDA">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_12_30_12_ASDA">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_12_30_12_LDA">
+              <aixm:type>LDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_12_30_12_LDA">
+                  <aixm:distance uom="M">1748</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RCP_12_30_12_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RCP_12_30_12_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayDirection gml:id="uuid.effbf900-9d13-5142-8bd5-3583aa57e1eb">
+      <gml:identifier codeSpace="urn:uuid:">effbf900-9d13-5142-8bd5-3583aa57e1eb</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayDirectionTimeSlice gml:id="RDN_12_30_30">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RDN_12_30_30">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RDN_12_30_30">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>30</aixm:designator>
+          <aixm:trueBearing>301.0</aixm:trueBearing>
+          <aixm:magneticBearing>299</aixm:magneticBearing>
+          <aixm:approachMarkingType>NONPRECISION</aixm:approachMarkingType>
+          <aixm:approachMarkingCondition>GOOD</aixm:approachMarkingCondition>
+          <aixm:usedRunway xlink:href="urn:uuid:2fd97fde-95cd-5787-a125-c63a962255cd" xlink:title="12/30"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RDN_12_30_30_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RDN_12_30_30_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). Geodesic bearing between published end coordinates is 301.28 DEG T, i.e. -0.28 DEG from the published true bearing.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayDirectionTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayDirection>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RunwayCentrelinePoint gml:id="uuid.aa8c77cc-f7a5-54b4-8165-dfeb809cca31">
+      <gml:identifier codeSpace="urn:uuid:">aa8c77cc-f7a5-54b4-8165-dfeb809cca31</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RunwayCentrelinePointTimeSlice gml:id="RCP_12_30_30">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RCP_12_30_30">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RCP_12_30_30">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:role>THR</aixm:role>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="geo_RCP_12_30_30" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.039806000 32.457901000</gml:pos>
+              <aixm:horizontalAccuracy uom="M">3.0</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">1143.6</aixm:elevation>
+              <aixm:verticalAccuracy uom="M">3.0</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:onRunway xlink:href="urn:uuid:effbf900-9d13-5142-8bd5-3583aa57e1eb" xlink:title="30"/>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_12_30_30_TORA">
+              <aixm:type>TORA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_12_30_30_TORA">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_12_30_30_TODA">
+              <aixm:type>TODA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_12_30_30_TODA">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_12_30_30_ASDA">
+              <aixm:type>ASDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_12_30_30_ASDA">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:associatedDeclaredDistance>
+            <aixm:RunwayDeclaredDistance gml:id="rd_RCP_12_30_30_LDA">
+              <aixm:type>LDA</aixm:type>
+              <aixm:declaredValue>
+                <aixm:RunwayDeclaredDistanceValue gml:id="rdv_RCP_12_30_30_LDA">
+                  <aixm:distance uom="M">2400</aixm:distance>
+                  <aixm:distanceAccuracy uom="M">1</aixm:distanceAccuracy>
+                </aixm:RunwayDeclaredDistanceValue>
+              </aixm:declaredValue>
+            </aixm:RunwayDeclaredDistance>
+          </aixm:associatedDeclaredDistance>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RCP_12_30_30_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RCP_12_30_30_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RunwayCentrelinePointTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RunwayCentrelinePoint>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Navaid gml:id="uuid.f2910d73-b01e-57c3-b7ca-ec35353c396d">
+      <gml:identifier codeSpace="urn:uuid:">f2910d73-b01e-57c3-b7ca-ec35353c396d</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:NavaidTimeSlice gml:id="NAV_NN">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_NAV_NN">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_NAV_NN">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>VOR_DME</aixm:type>
+          <aixm:designator>NN</aixm:designator>
+          <aixm:name>ENTEBBE</aixm:name>
+          <aixm:flightChecked>YES</aixm:flightChecked>
+          <aixm:purpose>ALL</aixm:purpose>
+          <aixm:navaidEquipment>
+            <aixm:NavaidComponent gml:id="nc_NAVEQ_NN_VOR">
+              <aixm:collocationGroup>1</aixm:collocationGroup>
+              <aixm:theNavaidEquipment xlink:href="urn:uuid:ac73cc76-294f-5c80-86fa-2a6c41606d5e" xlink:title="VOR_NN"/>
+            </aixm:NavaidComponent>
+          </aixm:navaidEquipment>
+          <aixm:navaidEquipment>
+            <aixm:NavaidComponent gml:id="nc_NAVEQ_NN_DME">
+              <aixm:collocationGroup>1</aixm:collocationGroup>
+              <aixm:theNavaidEquipment xlink:href="urn:uuid:382d552a-f07f-512b-9bc8-df82d581cd8a" xlink:title="DME_NN"/>
+            </aixm:NavaidComponent>
+          </aixm:navaidEquipment>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="geo_NAV_NN" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.052997000 32.437999000</gml:pos>
+              <aixm:horizontalAccuracy uom="M">15.0</aixm:horizontalAccuracy>
+              <aixm:elevation uom="M">1152.8</aixm:elevation>
+              <aixm:verticalAccuracy uom="M">30.0</aixm:verticalAccuracy>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:servedAirport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_NAV_NN_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_NAV_NN_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). Navaid position from OurAirports; the DME is assumed co-located. Located 1.3 km from the aerodrome reference point.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:NavaidTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Navaid>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:VOR gml:id="uuid.ac73cc76-294f-5c80-86fa-2a6c41606d5e">
+      <gml:identifier codeSpace="urn:uuid:">ac73cc76-294f-5c80-86fa-2a6c41606d5e</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:VORTimeSlice gml:id="NAVEQ_NN_VOR">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_NAVEQ_NN_VOR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_NAVEQ_NN_VOR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>NN</aixm:designator>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="geo_NAVEQ_NN_VOR" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.052997000 32.437999000</gml:pos>
+              <aixm:elevation uom="M">1152.8</aixm:elevation>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_NAVEQ_NN_VOR_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_NAVEQ_NN_VOR_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:type>VOR</aixm:type>
+          <aixm:frequency uom="MHZ">117.5</aixm:frequency>
+          <aixm:zeroBearingDirection>TRUE</aixm:zeroBearingDirection>
+        </aixm:VORTimeSlice>
+      </aixm:timeSlice>
+    </aixm:VOR>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:DME gml:id="uuid.382d552a-f07f-512b-9bc8-df82d581cd8a">
+      <gml:identifier codeSpace="urn:uuid:">382d552a-f07f-512b-9bc8-df82d581cd8a</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:DMETimeSlice gml:id="NAVEQ_NN_DME">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_NAVEQ_NN_DME">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_NAVEQ_NN_DME">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>NN</aixm:designator>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="geo_NAVEQ_NN_DME" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.052997000 32.437999000</gml:pos>
+              <aixm:elevation uom="M">1152.8</aixm:elevation>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_NAVEQ_NN_DME_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_NAVEQ_NN_DME_90">
+                  <aixm:note>Provenance: assumed; source: OurAirports open data set (airports/runways/navaids/frequencies). DME position assumed co-located with the VOR.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:channel>122X</aixm:channel>
+        </aixm:DMETimeSlice>
+      </aixm:timeSlice>
+    </aixm:DME>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:NDB gml:id="uuid.8734f73d-9b16-5732-b4c9-da8d30bed171">
+      <gml:identifier codeSpace="urn:uuid:">8734f73d-9b16-5732-b4c9-da8d30bed171</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:NDBTimeSlice gml:id="NAV_EM">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_NAV_EM">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_NAV_EM">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>EM</aixm:designator>
+          <aixm:name>ENTEBBE</aixm:name>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="geo_NAV_EM" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.138594000 32.424702000</gml:pos>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_NAV_EM_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_NAV_EM_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). NDB elevation not published; position only. Located 10.9 km from the aerodrome reference point.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:frequency uom="MHZ">0.355</aixm:frequency>
+        </aixm:NDBTimeSlice>
+      </aixm:timeSlice>
+    </aixm:NDB>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:NDB gml:id="uuid.f2c631a4-f4a3-5aad-8001-c0b339d1245f">
+      <gml:identifier codeSpace="urn:uuid:">f2c631a4-f4a3-5aad-8001-c0b339d1245f</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:NDBTimeSlice gml:id="NAV_PB">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_NAV_PB">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_NAV_PB">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:designator>PB</aixm:designator>
+          <aixm:name>PORT BELL</aixm:name>
+          <aixm:location>
+            <aixm:ElevatedPoint gml:id="geo_NAV_PB" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:pos>0.295775000 32.655998000</gml:pos>
+            </aixm:ElevatedPoint>
+          </aixm:location>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_NAV_PB_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_NAV_PB_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies). NDB elevation not published; position only. Located 36.8 km from the aerodrome reference point.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:frequency uom="MHZ">0.27</aixm:frequency>
+        </aixm:NDBTimeSlice>
+      </aixm:timeSlice>
+    </aixm:NDB>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RadioCommunicationChannel gml:id="uuid.bdcbdbed-717c-5988-8cf1-3c31de95b1a4">
+      <gml:identifier codeSpace="urn:uuid:">bdcbdbed-717c-5988-8cf1-3c31de95b1a4</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RadioCommunicationChannelTimeSlice gml:id="RCC_TWR">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RCC_TWR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RCC_TWR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:frequencyTransmission uom="MHZ">118.100</aixm:frequencyTransmission>
+          <aixm:frequencyReception uom="MHZ">118.100</aixm:frequencyReception>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RCC_TWR_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RCC_TWR_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RadioCommunicationChannelTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RadioCommunicationChannel>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RadioCommunicationChannel gml:id="uuid.b85d7ff5-ee7d-57ca-bdf8-22c269ba7d74">
+      <gml:identifier codeSpace="urn:uuid:">b85d7ff5-ee7d-57ca-bdf8-22c269ba7d74</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RadioCommunicationChannelTimeSlice gml:id="RCC_APP_RADAR">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RCC_APP_RADAR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RCC_APP_RADAR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:frequencyTransmission uom="MHZ">126.600</aixm:frequencyTransmission>
+          <aixm:frequencyReception uom="MHZ">126.600</aixm:frequencyReception>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RCC_APP_RADAR_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RCC_APP_RADAR_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RadioCommunicationChannelTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RadioCommunicationChannel>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RadioCommunicationChannel gml:id="uuid.727c8ed0-3f2f-50f6-9f6f-6c469da7cb39">
+      <gml:identifier codeSpace="urn:uuid:">727c8ed0-3f2f-50f6-9f6f-6c469da7cb39</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RadioCommunicationChannelTimeSlice gml:id="RCC_APP_DAFIF">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RCC_APP_DAFIF">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RCC_APP_DAFIF">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:frequencyTransmission uom="MHZ">119.100</aixm:frequencyTransmission>
+          <aixm:frequencyReception uom="MHZ">119.100</aixm:frequencyReception>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RCC_APP_DAFIF_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RCC_APP_DAFIF_90">
+                  <aixm:note>Provenance: assumed; source: DAFIF figures as republished (Airports Worldwide, SkyVector). DAFIF lists APP 119.1 as 'opr unrel'; may be stale or an alternate sector.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RadioCommunicationChannelTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RadioCommunicationChannel>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:RadioCommunicationChannel gml:id="uuid.6207e7e4-7fc1-5f12-b438-5e384cee3353">
+      <gml:identifier codeSpace="urn:uuid:">6207e7e4-7fc1-5f12-b438-5e384cee3353</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:RadioCommunicationChannelTimeSlice gml:id="RCC_ACC">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_RCC_ACC">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_RCC_ACC">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:frequencyTransmission uom="MHZ">128.500</aixm:frequencyTransmission>
+          <aixm:frequencyReception uom="MHZ">128.500</aixm:frequencyReception>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_RCC_ACC_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_RCC_ACC_90">
+                  <aixm:note>Provenance: published; source: OurAirports open data set (airports/runways/navaids/frequencies).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:RadioCommunicationChannelTimeSlice>
+      </aixm:timeSlice>
+    </aixm:RadioCommunicationChannel>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Unit gml:id="uuid.fa91ff2b-6e6a-5f7a-a3ae-b1510cf808bd">
+      <gml:identifier codeSpace="urn:uuid:">fa91ff2b-6e6a-5f7a-a3ae-b1510cf808bd</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:UnitTimeSlice gml:id="UNIT_EBBTWR">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_UNIT_EBBTWR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_UNIT_EBBTWR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>ENTEBBE TOWER</aixm:name>
+          <aixm:type>TWR</aixm:type>
+          <aixm:designator>EBBTWR</aixm:designator>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_UNIT_EBBTWR_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_UNIT_EBBTWR_90">
+                  <aixm:note>Provenance: assumed; source: OurAirports open data set (airports/runways/navaids/frequencies). ATS unit existence inferred from the published radio channels.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:UnitTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Unit>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Unit gml:id="uuid.70b153ce-22ee-5590-9ea2-17a6b4d98b22">
+      <gml:identifier codeSpace="urn:uuid:">70b153ce-22ee-5590-9ea2-17a6b4d98b22</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:UnitTimeSlice gml:id="UNIT_EBBAPP">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_UNIT_EBBAPP">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_UNIT_EBBAPP">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>ENTEBBE APPROACH</aixm:name>
+          <aixm:type>APP</aixm:type>
+          <aixm:designator>EBBAPP</aixm:designator>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_UNIT_EBBAPP_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_UNIT_EBBAPP_90">
+                  <aixm:note>Provenance: assumed; source: OurAirports open data set (airports/runways/navaids/frequencies). ATS unit existence inferred from the published radio channels.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:UnitTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Unit>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:AirTrafficControlService gml:id="uuid.311c3ef6-5826-52ce-ad50-1f8ec8094cbe">
+      <gml:identifier codeSpace="urn:uuid:">311c3ef6-5826-52ce-ad50-1f8ec8094cbe</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirTrafficControlServiceTimeSlice gml:id="SVC_TWR">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_SVC_TWR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_SVC_TWR">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:flightOperations>ALL</aixm:flightOperations>
+          <aixm:rank>PRIMARY</aixm:rank>
+          <aixm:compliantICAO>YES</aixm:compliantICAO>
+          <aixm:name>ENTEBBE TOWER</aixm:name>
+          <aixm:serviceProvider xlink:href="urn:uuid:fa91ff2b-6e6a-5f7a-a3ae-b1510cf808bd" xlink:title="EBBTWR"/>
+          <aixm:call-sign>
+            <aixm:CallsignDetail gml:id="cs_SVC_TWR">
+              <aixm:callSign>ENTEBBE TOWER</aixm:callSign>
+            </aixm:CallsignDetail>
+          </aixm:call-sign>
+          <aixm:radioCommunication xlink:href="urn:uuid:bdcbdbed-717c-5988-8cf1-3c31de95b1a4" xlink:title="TWR"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_SVC_TWR_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_SVC_TWR_90">
+                  <aixm:note>Provenance: assumed; source: OurAirports open data set (airports/runways/navaids/frequencies). Service hours stated as H24; not modelled as a timesheet in AIXM 5.1.1 availability.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:type>TWR</aixm:type>
+          <aixm:clientAirport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+        </aixm:AirTrafficControlServiceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:AirTrafficControlService>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:AirTrafficControlService gml:id="uuid.3ea9db59-4bf5-5cf5-b070-46ce894f6397">
+      <gml:identifier codeSpace="urn:uuid:">3ea9db59-4bf5-5cf5-b070-46ce894f6397</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:AirTrafficControlServiceTimeSlice gml:id="SVC_APP">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_SVC_APP">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_SVC_APP">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:flightOperations>ALL</aixm:flightOperations>
+          <aixm:rank>PRIMARY</aixm:rank>
+          <aixm:compliantICAO>YES</aixm:compliantICAO>
+          <aixm:name>ENTEBBE APPROACH</aixm:name>
+          <aixm:serviceProvider xlink:href="urn:uuid:70b153ce-22ee-5590-9ea2-17a6b4d98b22" xlink:title="EBBAPP"/>
+          <aixm:call-sign>
+            <aixm:CallsignDetail gml:id="cs_SVC_APP">
+              <aixm:callSign>ENTEBBE APPROACH</aixm:callSign>
+            </aixm:CallsignDetail>
+          </aixm:call-sign>
+          <aixm:radioCommunication xlink:href="urn:uuid:b85d7ff5-ee7d-57ca-bdf8-22c269ba7d74" xlink:title="APP_RADAR"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_SVC_APP_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_SVC_APP_90">
+                  <aixm:note>Provenance: assumed; source: OurAirports open data set (airports/runways/navaids/frequencies). Service hours stated as H24; not modelled as a timesheet in AIXM 5.1.1 availability.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:type>APP</aixm:type>
+          <aixm:clientAirport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+        </aixm:AirTrafficControlServiceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:AirTrafficControlService>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:FireFightingService gml:id="uuid.db14c782-1104-5278-b9d9-4a9c7cfa585d">
+      <gml:identifier codeSpace="urn:uuid:">db14c782-1104-5278-b9d9-4a9c7cfa585d</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:FireFightingServiceTimeSlice gml:id="SVC_FFS">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_SVC_FFS">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_SVC_FFS">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:flightOperations>ALL</aixm:flightOperations>
+          <aixm:compliantICAO>YES</aixm:compliantICAO>
+          <aixm:name>ENTEBBE FIRE AND RESCUE</aixm:name>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_SVC_FFS_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_SVC_FFS_90">
+                  <aixm:note>Provenance: published; source: HUEN aerodrome/AD 2 chart extract (declared distances, RFF, hours).</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:airportHeliport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:category>A9</aixm:category>
+          <aixm:standard>ICAO</aixm:standard>
+        </aixm:FireFightingServiceTimeSlice>
+      </aixm:timeSlice>
+    </aixm:FireFightingService>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Taxiway gml:id="uuid.432265e7-f5d7-5775-b886-550fa8ae1671">
+      <gml:identifier codeSpace="urn:uuid:">432265e7-f5d7-5775-b886-550fa8ae1671</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayTimeSlice gml:id="TWY_PARALLEL">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_TWY_PARALLEL">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_TWY_PARALLEL">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:width uom="M">23</aixm:width>
+          <aixm:length uom="M">3599.4</aixm:length>
+          <aixm:surfaceProperties>
+            <aixm:SurfaceCharacteristics gml:id="sc_TWY_PARALLEL">
+              <aixm:composition>ASPH</aixm:composition>
+            </aixm:SurfaceCharacteristics>
+          </aixm:surfaceProperties>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_PARALLEL_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_PARALLEL_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). East-side parallel taxiway; 180 m from the 17/35 centreline, spanning lat 0.0235-0.0555. Designator not published in accessible sources; omitted rather than invented.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:TaxiwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Taxiway>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.93b1f5ca-5511-5731-8f5c-0cb29754e02e">
+      <gml:identifier codeSpace="urn:uuid:">93b1f5ca-5511-5731-8f5c-0cb29754e02e</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="TWY_PARALLEL_ELEMENT">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_TWY_PARALLEL_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_TWY_PARALLEL_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>NORMAL</aixm:type>
+          <aixm:length uom="M">3599.4</aixm:length>
+          <aixm:width uom="M">23</aixm:width>
+          <aixm:associatedTaxiway xlink:href="urn:uuid:432265e7-f5d7-5775-b886-550fa8ae1671"/>
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="sfc_TWY_PARALLEL_ELEMENT" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <gml:Curve gml:id="crv_TWY_PARALLEL_ELEMENT">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>0.055513458 32.437657005
+0.023545458 32.442743005
+0.023512542 32.442538995
+0.055480542 32.437452995
+0.055513458 32.437657005</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </gml:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_PARALLEL_ELEMENT_1">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_PARALLEL_ELEMENT_1">
+                  <aixm:note>East-side parallel taxiway; 180 m from the 17/35 centreline, spanning lat 0.0235-0.0555.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_PARALLEL_ELEMENT_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_PARALLEL_ELEMENT_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Surface is a generated buffer around the derived taxiway centreline.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Taxiway gml:id="uuid.e96a72ad-a795-55c7-8447-9fb92497f066">
+      <gml:identifier codeSpace="urn:uuid:">e96a72ad-a795-55c7-8447-9fb92497f066</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayTimeSlice gml:id="TWY_LINK_NORTH">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_TWY_LINK_NORTH">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_TWY_LINK_NORTH">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:width uom="M">23</aixm:width>
+          <aixm:length uom="M">139.9</aixm:length>
+          <aixm:surfaceProperties>
+            <aixm:SurfaceCharacteristics gml:id="sc_TWY_LINK_NORTH">
+              <aixm:composition>ASPH</aixm:composition>
+            </aixm:SurfaceCharacteristics>
+          </aixm:surfaceProperties>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_LINK_NORTH_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_LINK_NORTH_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Link between the runway 17 end area and the parallel taxiway. Designator not published in accessible sources; omitted rather than invented.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:TaxiwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Taxiway>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.e5535f31-355d-500f-9d4f-9c0d92899f1d">
+      <gml:identifier codeSpace="urn:uuid:">e5535f31-355d-500f-9d4f-9c0d92899f1d</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="TWY_LINK_NORTH_ELEMENT">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_TWY_LINK_NORTH_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_TWY_LINK_NORTH_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>NORMAL</aixm:type>
+          <aixm:length uom="M">139.9</aixm:length>
+          <aixm:width uom="M">23</aixm:width>
+          <aixm:associatedTaxiway xlink:href="urn:uuid:e96a72ad-a795-55c7-8447-9fb92497f066"/>
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="sfc_TWY_LINK_NORTH_ELEMENT" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <gml:Curve gml:id="crv_TWY_LINK_NORTH_ELEMENT">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>0.054684717 32.436410609
+0.054885717 32.437652609
+0.054680283 32.437685391
+0.054479283 32.436443391
+0.054684717 32.436410609</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </gml:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_LINK_NORTH_ELEMENT_1">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_LINK_NORTH_ELEMENT_1">
+                  <aixm:note>Link between the runway 17 end area and the parallel taxiway.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_LINK_NORTH_ELEMENT_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_LINK_NORTH_ELEMENT_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Surface is a generated buffer around the derived taxiway centreline.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Taxiway gml:id="uuid.799f9051-50e6-5102-b4dc-718843b4c683">
+      <gml:identifier codeSpace="urn:uuid:">799f9051-50e6-5102-b4dc-718843b4c683</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayTimeSlice gml:id="TWY_LINK_SOUTH">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_TWY_LINK_SOUTH">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_TWY_LINK_SOUTH">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:width uom="M">23</aixm:width>
+          <aixm:length uom="M">119.8</aixm:length>
+          <aixm:surfaceProperties>
+            <aixm:SurfaceCharacteristics gml:id="sc_TWY_LINK_SOUTH">
+              <aixm:composition>ASPH</aixm:composition>
+            </aixm:SurfaceCharacteristics>
+          </aixm:surfaceProperties>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_LINK_SOUTH_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_LINK_SOUTH_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Link between the runway 35 end area and the parallel taxiway. Designator not published in accessible sources; omitted rather than invented.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:TaxiwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Taxiway>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.afd24405-49f2-581d-a6b5-d09c14188557">
+      <gml:identifier codeSpace="urn:uuid:">afd24405-49f2-581d-a6b5-d09c14188557</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="TWY_LINK_SOUTH_ELEMENT">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_TWY_LINK_SOUTH_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_TWY_LINK_SOUTH_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>NORMAL</aixm:type>
+          <aixm:length uom="M">119.8</aixm:length>
+          <aixm:width uom="M">23</aixm:width>
+          <aixm:associatedTaxiway xlink:href="urn:uuid:799f9051-50e6-5102-b4dc-718843b4c683"/>
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="sfc_TWY_LINK_SOUTH_ELEMENT" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <gml:Curve gml:id="crv_TWY_LINK_SOUTH_ELEMENT">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>0.024531720 32.441389627
+0.024703720 32.442453627
+0.024498280 32.442486373
+0.024326280 32.441422373
+0.024531720 32.441389627</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </gml:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_LINK_SOUTH_ELEMENT_1">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_LINK_SOUTH_ELEMENT_1">
+                  <aixm:note>Link between the runway 35 end area and the parallel taxiway.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_LINK_SOUTH_ELEMENT_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_LINK_SOUTH_ELEMENT_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Surface is a generated buffer around the derived taxiway centreline.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Taxiway gml:id="uuid.367bf102-572c-5ae2-a24d-8c531673b6a4">
+      <gml:identifier codeSpace="urn:uuid:">367bf102-572c-5ae2-a24d-8c531673b6a4</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayTimeSlice gml:id="TWY_LINK_APRON">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_TWY_LINK_APRON">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_TWY_LINK_APRON">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:width uom="M">23</aixm:width>
+          <aixm:length uom="M">379.7</aixm:length>
+          <aixm:surfaceProperties>
+            <aixm:SurfaceCharacteristics gml:id="sc_TWY_LINK_APRON">
+              <aixm:composition>ASPH</aixm:composition>
+            </aixm:SurfaceCharacteristics>
+          </aixm:surfaceProperties>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_LINK_APRON_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_LINK_APRON_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Link between the main apron and the parallel taxiway. Designator not published in accessible sources; omitted rather than invented.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:TaxiwayTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Taxiway>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:TaxiwayElement gml:id="uuid.0264b1bf-5b7e-5283-9e5d-6eee361f5a43">
+      <gml:identifier codeSpace="urn:uuid:">0264b1bf-5b7e-5283-9e5d-6eee361f5a43</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:TaxiwayElementTimeSlice gml:id="TWY_LINK_APRON_ELEMENT">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_TWY_LINK_APRON_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_TWY_LINK_APRON_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>NORMAL</aixm:type>
+          <aixm:length uom="M">379.7</aixm:length>
+          <aixm:width uom="M">23</aixm:width>
+          <aixm:associatedTaxiway xlink:href="urn:uuid:367bf102-572c-5ae2-a24d-8c531673b6a4"/>
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="sfc_TWY_LINK_APRON_ELEMENT" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <gml:Curve gml:id="crv_TWY_LINK_APRON_ELEMENT">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>0.049685276 32.441937346
+0.049141276 32.438566346
+0.049346724 32.438533654
+0.049890724 32.441904654
+0.049685276 32.441937346</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </gml:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_LINK_APRON_ELEMENT_1">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_LINK_APRON_ELEMENT_1">
+                  <aixm:note>Link between the main apron and the parallel taxiway.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_TWY_LINK_APRON_ELEMENT_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_TWY_LINK_APRON_ELEMENT_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Surface is a generated buffer around the derived taxiway centreline.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:TaxiwayElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:TaxiwayElement>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Apron gml:id="uuid.7792253a-01e0-5c98-a361-e2cf601e36d0">
+      <gml:identifier codeSpace="urn:uuid:">7792253a-01e0-5c98-a361-e2cf601e36d0</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:ApronTimeSlice gml:id="APRON_MAIN">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_APRON_MAIN">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_APRON_MAIN">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>MAIN APRON</aixm:name>
+          <aixm:surfaceProperties>
+            <aixm:SurfaceCharacteristics gml:id="sc_APRON_MAIN">
+              <aixm:composition>ASPH</aixm:composition>
+            </aixm:SurfaceCharacteristics>
+          </aixm:surfaceProperties>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_APRON_MAIN_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_APRON_MAIN_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Envelope of 4 181 observed ground positions; approx. 950 x 325 m east of runway 17/35, abeam the terminal. Name is descriptive, not published.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:ApronTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Apron>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:ApronElement gml:id="uuid.ef25bc5c-63c0-5585-9d97-cbc533009504">
+      <gml:identifier codeSpace="urn:uuid:">ef25bc5c-63c0-5585-9d97-cbc533009504</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:ApronElementTimeSlice gml:id="APRON_MAIN_ELEMENT">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_APRON_MAIN_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_APRON_MAIN_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>NORMAL</aixm:type>
+          <aixm:associatedApron xlink:href="urn:uuid:7792253a-01e0-5c98-a361-e2cf601e36d0" xlink:title="MAIN APRON"/>
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="sfc_APRON_MAIN_ELEMENT" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <gml:Curve gml:id="crv_APRON_MAIN_ELEMENT">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>0.050178000 32.438812000
+0.041654000 32.440167000
+0.042120000 32.443057000
+0.050644000 32.441701000
+0.050178000 32.438812000</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </gml:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_APRON_MAIN_ELEMENT_1">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_APRON_MAIN_ELEMENT_1">
+                  <aixm:note>Envelope of 4 181 observed ground positions; approx. 950 x 325 m east of runway 17/35, abeam the terminal.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_APRON_MAIN_ELEMENT_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_APRON_MAIN_ELEMENT_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Surface is the envelope polygon declared in the source YAML, not a surveyed apron boundary.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:ApronElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:ApronElement>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:Apron gml:id="uuid.556ee995-f038-5ffb-8dad-d6e50d932377">
+      <gml:identifier codeSpace="urn:uuid:">556ee995-f038-5ffb-8dad-d6e50d932377</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:ApronTimeSlice gml:id="APRON_NORTH">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_APRON_NORTH">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_APRON_NORTH">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:name>NORTH APRON</aixm:name>
+          <aixm:surfaceProperties>
+            <aixm:SurfaceCharacteristics gml:id="sc_APRON_NORTH">
+              <aixm:composition>ASPH</aixm:composition>
+            </aixm:SurfaceCharacteristics>
+          </aixm:surfaceProperties>
+          <aixm:associatedAirportHeliport xlink:href="urn:uuid:c69cb32f-504c-55e6-8e42-37f747da01ad" xlink:title="HUEN"/>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_APRON_NORTH_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_APRON_NORTH_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Envelope of 1 669 observed ground positions north of the main apron; purpose (cargo/military) not established. Name is descriptive, not published.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:ApronTimeSlice>
+      </aixm:timeSlice>
+    </aixm:Apron>
+  </message:hasMember>
+  <message:hasMember>
+    <aixm:ApronElement gml:id="uuid.c4eb9b1e-ec7d-530e-a68e-3d4078bcb960">
+      <gml:identifier codeSpace="urn:uuid:">c4eb9b1e-ec7d-530e-a68e-3d4078bcb960</gml:identifier>
+      <aixm:timeSlice>
+        <aixm:ApronElementTimeSlice gml:id="APRON_NORTH_ELEMENT">
+          <gml:validTime>
+            <gml:TimePeriod gml:id="vt_APRON_NORTH_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </gml:validTime>
+          <aixm:interpretation>BASELINE</aixm:interpretation>
+          <aixm:sequenceNumber>1</aixm:sequenceNumber>
+          <aixm:correctionNumber>0</aixm:correctionNumber>
+          <aixm:featureLifetime>
+            <gml:TimePeriod gml:id="lt_APRON_NORTH_ELEMENT">
+              <gml:beginPosition>2026-10-26T00:00:00Z</gml:beginPosition>
+              <gml:endPosition indeterminatePosition="unknown"/>
+            </gml:TimePeriod>
+          </aixm:featureLifetime>
+          <aixm:type>NORMAL</aixm:type>
+          <aixm:associatedApron xlink:href="urn:uuid:556ee995-f038-5ffb-8dad-d6e50d932377" xlink:title="NORTH APRON"/>
+          <aixm:extent>
+            <aixm:ElevatedSurface gml:id="sfc_APRON_NORTH_ELEMENT" srsName="urn:ogc:def:crs:EPSG::4326">
+              <gml:patches>
+                <gml:PolygonPatch>
+                  <gml:exterior>
+                    <gml:Ring>
+                      <gml:curveMember>
+                        <gml:Curve gml:id="crv_APRON_NORTH_ELEMENT">
+                          <gml:segments>
+                            <gml:GeodesicString>
+                              <gml:posList>0.053814000 32.438324000
+0.049617000 32.438992000
+0.049848000 32.440419000
+0.054044000 32.439752000
+0.053814000 32.438324000</gml:posList>
+                            </gml:GeodesicString>
+                          </gml:segments>
+                        </gml:Curve>
+                      </gml:curveMember>
+                    </gml:Ring>
+                  </gml:exterior>
+                </gml:PolygonPatch>
+              </gml:patches>
+            </aixm:ElevatedSurface>
+          </aixm:extent>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_APRON_NORTH_ELEMENT_1">
+              <aixm:propertyName>extent</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_APRON_NORTH_ELEMENT_1">
+                  <aixm:note>Envelope of 1 669 observed ground positions north of the main apron; purpose (cargo/military) not established.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+          <aixm:annotation>
+            <aixm:Note gml:id="note_APRON_NORTH_ELEMENT_90">
+              <aixm:propertyName>feature</aixm:propertyName>
+              <aixm:translatedNote>
+                <aixm:LinguisticNote gml:id="lnote_APRON_NORTH_ELEMENT_90">
+                  <aixm:note>Provenance: derived; source: FR24 position tracks in this repository (tracks/, 350 flights). Surface is the envelope polygon declared in the source YAML, not a surveyed apron boundary.</aixm:note>
+                </aixm:LinguisticNote>
+              </aixm:translatedNote>
+            </aixm:Note>
+          </aixm:annotation>
+        </aixm:ApronElementTimeSlice>
+      </aixm:timeSlice>
+    </aixm:ApronElement>
+  </message:hasMember>
+</message:AIXMBasicMessage>

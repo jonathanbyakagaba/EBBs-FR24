@@ -1,0 +1,627 @@
+{
+  "dataset": {
+    "title": "HUEN - ENTEBBE INTERNATIONAL AIRPORT - aerodrome (AD 2 scope)",
+    "abstract": "AIXM 5.1.1 aerodrome data set for Entebbe International Airport, covering the aerodrome, runways and runway directions, landing thresholds and declared distances, taxiway and apron areas, radio navigation aids, communication channels and aerodrome services. Assembled from open data; geometry for taxiways and aprons is derived from observed aircraft ground tracks held in this repository. Not for operational use.",
+    "location_indicator": "HUEN",
+    "effective": "2026-10-26T00:00:00Z",
+    "language": "eng",
+    "publisher": "EBBs-FR24 (analysis project, unaffiliated with Uganda CAA)"
+  },
+  "sources": {
+    "ourairports": {
+      "name": "OurAirports open data set (airports/runways/navaids/frequencies)",
+      "url": "https://github.com/davidmegginson/ourairports-data",
+      "retrieved": "2026-10-26",
+      "note": "Runway end coordinates, headings, elevations and navaid positions. OurAirports is DAFIF-derived and community-corrected; end coordinates are rounded to ~4 decimal places (~11 m), so lengths derived from them differ slightly from published runway lengths."
+    },
+    "dafif": {
+      "name": "DAFIF figures as republished (Airports Worldwide, SkyVector)",
+      "url": "https://www.airports-worldwide.com/uganda/entebbe_intl_uganda.php",
+      "retrieved": "2026-10-26"
+    },
+    "chart": {
+      "name": "HUEN aerodrome/AD 2 chart extract (declared distances, RFF, hours)",
+      "url": "https://virtualairlines.eu/charts/HUEN.pdf",
+      "retrieved": "2026-10-26",
+      "note": "Secondary reproduction of the AIP AD 2.13 table and aerodrome chart. Used for declared distances, RFF category and H24 hours."
+    },
+    "tracks": {
+      "name": "FR24 position tracks in this repository (tracks/, 350 flights)",
+      "url": "https://github.com/jonathanbyakagaba/EBBs-FR24",
+      "retrieved": "2026-10-26",
+      "note": "Ground-level track points used to (a) verify the runway centrelines against published coordinates, (b) derive the east-side parallel taxiway offset and (c) derive apron envelopes. See scripts/track_crosscheck.py and out/track_crosscheck.md."
+    },
+    "wmm": {
+      "name": "World Magnetic Model estimate for the ARP",
+      "retrieved": "2026-10-26",
+      "note": "Sources disagree on the declination at HUEN: DAFIF (2006) 0.0, a WMM2020-derived service 1.4 E (Jun 2026), another 1.7 E (2026), and the published magnetic runway headings imply ~2 E. Modelled as 1.0 E with wide accuracy and flagged in the validation report."
+    }
+  },
+  "generated_from": "data/huen.yaml",
+  "output": "out/HUEN_AIP_DS.xml",
+  "feature_count": 56,
+  "records": [
+    {
+      "key": "AHP_HUEN",
+      "aixm_object": "AirportHeliport",
+      "label": "HUEN",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "ORG_UGANDA_CIVIL_AVIATION_AUTHORITY",
+      "aixm_object": "OrganisationAuthority",
+      "label": "UGANDA CIVIL AVIATION AUTHORITY",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "RWY_17_35",
+      "aixm_object": "Runway",
+      "label": "17/35",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [
+        "geodesic 3679.9 M vs published 3658 M"
+      ],
+      "inline": false
+    },
+    {
+      "key": "RWY_17_35_ELEMENT",
+      "aixm_object": "RunwayElement",
+      "label": "17/35",
+      "source": "ourairports",
+      "confidence": "derived",
+      "geometry": "4-point polygon",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "RDN_17_35_17",
+      "aixm_object": "RunwayDirection",
+      "label": "17",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [
+        "bearing delta +0.04 DEG"
+      ],
+      "inline": false
+    },
+    {
+      "key": "RCP_17_35_17_TORA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "17 TORA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_17_35_17_TODA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "17 TODA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_17_35_17_ASDA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "17 ASDA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_17_35_17_LDA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "17 LDA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_17_35_17",
+      "aixm_object": "RunwayCentrelinePoint",
+      "label": "17 THR",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": "0.055597,32.435902",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "RDN_17_35_35",
+      "aixm_object": "RunwayDirection",
+      "label": "35",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [
+        "bearing delta +0.04 DEG"
+      ],
+      "inline": false
+    },
+    {
+      "key": "RCP_17_35_35_TORA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "35 TORA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_17_35_35_TODA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "35 TODA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_17_35_35_ASDA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "35 ASDA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_17_35_35_LDA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "35 LDA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_17_35_35",
+      "aixm_object": "RunwayCentrelinePoint",
+      "label": "35 THR",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": "0.022914,32.441101",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "RWY_12_30",
+      "aixm_object": "Runway",
+      "label": "12/30",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [
+        "geodesic 2446.3 M vs published 2408 M"
+      ],
+      "inline": false
+    },
+    {
+      "key": "RWY_12_30_ELEMENT",
+      "aixm_object": "RunwayElement",
+      "label": "12/30",
+      "source": "ourairports",
+      "confidence": "derived",
+      "geometry": "4-point polygon",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "RDN_12_30_12",
+      "aixm_object": "RunwayDirection",
+      "label": "12",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [
+        "bearing delta -0.28 DEG"
+      ],
+      "inline": false
+    },
+    {
+      "key": "RCP_12_30_12_TORA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "12 TORA",
+      "source": "chart",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_12_30_12_TODA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "12 TODA",
+      "source": "chart",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_12_30_12_ASDA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "12 ASDA",
+      "source": "chart",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_12_30_12_LDA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "12 LDA",
+      "source": "chart",
+      "confidence": "assumed",
+      "geometry": null,
+      "notes": [
+        "LDA 1748 m vs TORA 2400 m with no published displaced threshold."
+      ],
+      "inline": true
+    },
+    {
+      "key": "RCP_12_30_12",
+      "aixm_object": "RunwayCentrelinePoint",
+      "label": "12 THR",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": "0.051228,32.439098",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "RDN_12_30_30",
+      "aixm_object": "RunwayDirection",
+      "label": "30",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [
+        "bearing delta -0.28 DEG"
+      ],
+      "inline": false
+    },
+    {
+      "key": "RCP_12_30_30_TORA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "30 TORA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_12_30_30_TODA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "30 TODA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_12_30_30_ASDA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "30 ASDA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_12_30_30_LDA",
+      "aixm_object": "RunwayDeclaredDistance",
+      "label": "30 LDA",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": true
+    },
+    {
+      "key": "RCP_12_30_30",
+      "aixm_object": "RunwayCentrelinePoint",
+      "label": "30 THR",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": "0.039806,32.457901",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "NAV_NN",
+      "aixm_object": "Navaid",
+      "label": "NN",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": "0.052997,32.437999",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "NAVEQ_NN_VOR",
+      "aixm_object": "VOR",
+      "label": "NN",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "NAVEQ_NN_DME",
+      "aixm_object": "DME",
+      "label": "NN",
+      "source": "ourairports",
+      "confidence": "assumed",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "NAV_EM",
+      "aixm_object": "NDB",
+      "label": "EM",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": "0.138594,32.424702",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "NAV_PB",
+      "aixm_object": "NDB",
+      "label": "PB",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": "0.295775,32.655998",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "RCC_TWR",
+      "aixm_object": "RadioCommunicationChannel",
+      "label": "118.100 MHZ",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "RCC_APP_RADAR",
+      "aixm_object": "RadioCommunicationChannel",
+      "label": "126.600 MHZ",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "RCC_APP_DAFIF",
+      "aixm_object": "RadioCommunicationChannel",
+      "label": "119.100 MHZ",
+      "source": "dafif",
+      "confidence": "assumed",
+      "geometry": null,
+      "notes": [
+        "DAFIF lists APP 119.1 as 'opr unrel'; may be stale or an alternate sector."
+      ],
+      "inline": false
+    },
+    {
+      "key": "RCC_ACC",
+      "aixm_object": "RadioCommunicationChannel",
+      "label": "128.500 MHZ",
+      "source": "ourairports",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "UNIT_EBBTWR",
+      "aixm_object": "Unit",
+      "label": "EBBTWR",
+      "source": "ourairports",
+      "confidence": "assumed",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "UNIT_EBBAPP",
+      "aixm_object": "Unit",
+      "label": "EBBAPP",
+      "source": "ourairports",
+      "confidence": "assumed",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "SVC_TWR",
+      "aixm_object": "AirTrafficControlService",
+      "label": "TWR",
+      "source": "ourairports",
+      "confidence": "assumed",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "SVC_APP",
+      "aixm_object": "AirTrafficControlService",
+      "label": "APP",
+      "source": "ourairports",
+      "confidence": "assumed",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "SVC_FFS",
+      "aixm_object": "FireFightingService",
+      "label": "RFF CAT A9",
+      "source": "chart",
+      "confidence": "published",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "TWY_PARALLEL",
+      "aixm_object": "Taxiway",
+      "label": "East-side parallel taxiway; 180 m from the 17/35 centreline, spanning lat 0.0235",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "2-point centreline, 3599 M",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "TWY_PARALLEL_ELEMENT",
+      "aixm_object": "TaxiwayElement",
+      "label": "PARALLEL",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "4-point surface",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "TWY_LINK_NORTH",
+      "aixm_object": "Taxiway",
+      "label": "Link between the runway 17 end area and the parallel taxiway.",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "2-point centreline, 140 M",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "TWY_LINK_NORTH_ELEMENT",
+      "aixm_object": "TaxiwayElement",
+      "label": "LINK_NORTH",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "4-point surface",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "TWY_LINK_SOUTH",
+      "aixm_object": "Taxiway",
+      "label": "Link between the runway 35 end area and the parallel taxiway.",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "2-point centreline, 120 M",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "TWY_LINK_SOUTH_ELEMENT",
+      "aixm_object": "TaxiwayElement",
+      "label": "LINK_SOUTH",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "4-point surface",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "TWY_LINK_APRON",
+      "aixm_object": "Taxiway",
+      "label": "Link between the main apron and the parallel taxiway.",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "2-point centreline, 380 M",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "TWY_LINK_APRON_ELEMENT",
+      "aixm_object": "TaxiwayElement",
+      "label": "LINK_APRON",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "4-point surface",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "APRON_MAIN",
+      "aixm_object": "Apron",
+      "label": "MAIN APRON",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "APRON_MAIN_ELEMENT",
+      "aixm_object": "ApronElement",
+      "label": "MAIN APRON",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "4-point surface",
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "APRON_NORTH",
+      "aixm_object": "Apron",
+      "label": "NORTH APRON",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": null,
+      "notes": [],
+      "inline": false
+    },
+    {
+      "key": "APRON_NORTH_ELEMENT",
+      "aixm_object": "ApronElement",
+      "label": "NORTH APRON",
+      "source": "tracks",
+      "confidence": "derived",
+      "geometry": "4-point surface",
+      "notes": [],
+      "inline": false
+    }
+  ],
+  "extent": {
+    "lat_min": 0.022881087753681133,
+    "lat_max": 0.295775,
+    "lon_min": 32.424702,
+    "lon_max": 32.655998
+  }
+}

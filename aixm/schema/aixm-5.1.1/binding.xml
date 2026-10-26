@@ -1,0 +1,104 @@
+<jxb:bindings xmlns:jxb="https://jakarta.ee/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              jxb:version="3.0">
+    <jxb:bindings schemaLocation="../xlink/xlink.xsd">
+        <jxb:bindings node="//xs:group[@name='locatorModel']//xs:element[@ref='xlink:title']">
+            <jxb:property name="locatorTitle"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:attributeGroup[@name='arcAttrs']//xs:attribute[@ref='xlink:title']">
+            <jxb:property name="arcTitle"/>
+        </jxb:bindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="./AIXM_DataTypes.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="com.algonents.aixm.datatypes"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="./message/AIXM_BasicMessage.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="com.algonents.aixm.message"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="./gml/3.2.1/gml.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="com.algonents.gml"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="./gml/3.2.1/datums.xsd">
+       <jxb:bindings node="//xs:element[@name='secondDefiningParameter']">
+           <jxb:class name="secondDefiningParameterProp"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='ellipsoid']">
+            <jxb:class name="ellpsoidElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='primeMeridian']">
+            <jxb:class name="primeMeridianElement"/>
+        </jxb:bindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="./gml/3.2.1/coordinateOperations.xsd">
+        <jxb:bindings node="//xs:element[@name='parameterValue']">
+            <jxb:class name="parameterValueElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='operationParameter']">
+            <jxb:class name="operationParameterElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='Conversion']">
+            <jxb:class name="ConversionElement"/>
+        </jxb:bindings>
+    </jxb:bindings>
+     <jxb:bindings schemaLocation="./gml/3.2.1/geometryPrimitives.xsd">
+        <jxb:bindings node="//xs:group[@name='PointGrid']//xs:element[@name='rows']">
+            <jxb:property name="pointGridRows"/>
+        </jxb:bindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="./gml/3.2.1/coordinateSystems.xsd">
+        <jxb:bindings node="//xs:element[@name='EllipsoidalCS']">
+            <jxb:class name="EllipsoidalCSElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='CartesianCS']">
+            <jxb:class name="CartesianCSElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='SphericalCS']">
+            <jxb:class name="SphericalCSElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='VerticalCS']">
+            <jxb:class name="VerticalCSElement"/>
+        </jxb:bindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="./gml/3.2.1/coordinateReferenceSystems.xsd">
+        <jxb:bindings node="//xs:element[@name='geodeticDatum']">
+            <jxb:class name="geodeticDatumElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='verticalDatum']">
+            <jxb:class name="verticalDatumElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='cylindricalCS']">
+            <jxb:class name="cylindricalCSElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='linearCS']">
+            <jxb:class name="linearCSElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='polarCS']">
+            <jxb:class name="polarCSElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='userDefinedCS']">
+            <jxb:class name="userDefinedCSElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='affineCS']">
+            <jxb:class name="affineCSElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='timeCS']">
+            <jxb:class name="timeCSElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='engineeringDatum']">
+            <jxb:class name="engineeringDatumElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='imageDatum']">
+            <jxb:class name="imageDatumElement"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='temporalDatum']">
+            <jxb:class name="temporalDatumElement"/>
+        </jxb:bindings>
+    </jxb:bindings>
+
+</jxb:bindings>

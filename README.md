@@ -133,6 +133,33 @@ works regardless.
 | `scripts/` | `enumerate_ebb.py`, `fetch_tracks.py`, `fr24_auth.py` |
 | `flight_numbers_seed.csv` | flight numbers to enumerate (see above) |
 
+## The aerodrome model (`aixm/`)
+
+`aixm/` turns the same airport into an **AIXM 5.1.1** data set — the ICAO
+aeronautical-information exchange model used by AIS systems and digital NOTAM.
+It is a generated artefact: `aixm/data/huen.yaml` is the source of truth, and
+`aixm/out/HUEN_AIP_DS.xml` is a schema-valid `AIXMBasicMessage` holding the
+aerodrome, runways and runway directions, thresholds and declared distances,
+taxiways, aprons, navaids, radio channels and services.
+
+```bash
+cd aixm && pip install -r requirements.txt && make
+```
+
+`make` builds the message, runs a validation suite (XSD against the vendored
+official AIXM 5.1.1 schemas, plus domain checks a schema cannot do — TORA vs
+runway length, reciprocal bearings, threshold-on-pavement, declared-distance
+consistency) and cross-checks the geometry against the tracks in this repo.
+It writes `aixm/out/HUEN_validation_report.md`; see
+[aixm/README.md](aixm/README.md) for the full model description.
+
+Two things worth noting. The taxiway/apron geometry is **derived from the
+observed ground tracks** rather than surveyed, and the validation report
+quantifies exactly how much of the observed ground movement it covers (about
+74%) rather than implying completeness. And every object carries its
+provenance in an AIXM annotation, so `published`, `derived` and `assumed`
+values are distinguishable inside the data set itself.
+
 ## Honest limitations
 
 - Built on the unofficial `fr24` Python library and the account's FR24
