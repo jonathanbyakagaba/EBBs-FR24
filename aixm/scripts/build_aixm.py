@@ -705,7 +705,7 @@ def build_taxiways(ctx: Ctx) -> None:
         ctx.provenance_note(ts, key, twy.get("_source"), twy.get("confidence", "derived"),
                             [twy.get("note", ""), "Designator not published in accessible sources; "
                              "omitted rather than invented."])
-        ctx.record(key, "Taxiway", twy.get("note", twy["key"])[:80],
+        ctx.record(key, "Taxiway", f"{twy['key']} (no published designator)",
                    twy.get("_source"), twy.get("confidence", "derived"),
                    geometry=f"{len(poly)}-point centreline, {length:.0f} M")
 

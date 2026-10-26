@@ -500,7 +500,7 @@
     {
       "key": "TWY_PARALLEL",
       "aixm_object": "Taxiway",
-      "label": "East-side parallel taxiway; 180 m from the 17/35 centreline, spanning lat 0.0235",
+      "label": "PARALLEL (no published designator)",
       "source": "tracks",
       "confidence": "derived",
       "geometry": "2-point centreline, 3599 M",
@@ -520,7 +520,7 @@
     {
       "key": "TWY_LINK_NORTH",
       "aixm_object": "Taxiway",
-      "label": "Link between the runway 17 end area and the parallel taxiway.",
+      "label": "LINK_NORTH (no published designator)",
       "source": "tracks",
       "confidence": "derived",
       "geometry": "2-point centreline, 140 M",
@@ -540,7 +540,7 @@
     {
       "key": "TWY_LINK_SOUTH",
       "aixm_object": "Taxiway",
-      "label": "Link between the runway 35 end area and the parallel taxiway.",
+      "label": "LINK_SOUTH (no published designator)",
       "source": "tracks",
       "confidence": "derived",
       "geometry": "2-point centreline, 120 M",
@@ -560,7 +560,7 @@
     {
       "key": "TWY_LINK_APRON",
       "aixm_object": "Taxiway",
-      "label": "Link between the main apron and the parallel taxiway.",
+      "label": "LINK_APRON (no published designator)",
       "source": "tracks",
       "confidence": "derived",
       "geometry": "2-point centreline, 380 M",

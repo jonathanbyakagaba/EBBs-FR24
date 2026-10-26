@@ -97,13 +97,13 @@ Objects that are **not** published values:
 | Unit | EBBAPP | assumed | ourairports |  |
 | AirTrafficControlService | TWR | assumed | ourairports |  |
 | AirTrafficControlService | APP | assumed | ourairports |  |
-| Taxiway | East-side parallel taxiway; 180 m from the 17/35 centreline, spanning lat 0.0235 | derived | tracks |  |
+| Taxiway | PARALLEL (no published designator) | derived | tracks |  |
 | TaxiwayElement | PARALLEL | derived | tracks |  |
-| Taxiway | Link between the runway 17 end area and the parallel taxiway. | derived | tracks |  |
+| Taxiway | LINK_NORTH (no published designator) | derived | tracks |  |
 | TaxiwayElement | LINK_NORTH | derived | tracks |  |
-| Taxiway | Link between the runway 35 end area and the parallel taxiway. | derived | tracks |  |
+| Taxiway | LINK_SOUTH (no published designator) | derived | tracks |  |
 | TaxiwayElement | LINK_SOUTH | derived | tracks |  |
-| Taxiway | Link between the main apron and the parallel taxiway. | derived | tracks |  |
+| Taxiway | LINK_APRON (no published designator) | derived | tracks |  |
 | TaxiwayElement | LINK_APRON | derived | tracks |  |
 | Apron | MAIN APRON | derived | tracks |  |
 | ApronElement | MAIN APRON | derived | tracks |  |
