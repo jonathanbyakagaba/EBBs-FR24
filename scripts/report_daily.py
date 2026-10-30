@@ -128,6 +128,26 @@ def report(board_path: Path, tracks_path: Path, reports_dir: Path) -> int:
             a(f"| {d} | {dates[d]} |")
         a("")
 
+    # Whole reporting day: this run plus the previous one (the two daily exports).
+    hist_path = reports_dir / "history.csv"
+    prior = list(csv.DictReader(open(hist_path, newline=""))) if hist_path.exists() else []
+    prev = prior[-1:] if prior else []
+    day_mv = len(added) + sum(int(r["movements_added"] or 0) for r in prev)
+    day_tr = len(new_tracks) + sum(int(r["tracks_added"] or 0) for r in prev)
+    day_pts = new_points + sum(int(r["track_points_added"] or 0) for r in prev)
+
+    a("")
+    a("## Both runs of this reporting day")
+    a("")
+    a(f"- **{day_mv} movements, {day_tr} track files, {day_pts:,} position points**")
+    a(f"- this run: {len(added)} movements / {len(new_tracks)} tracks")
+    if prev:
+        a(f"- previous run ({prev[-1]['run_utc']}): {prev[-1]['movements_added']} "
+          f"movements / {prev[-1]['tracks_added']} tracks")
+    else:
+        a("- previous run: none recorded")
+    a("")
+
     a("## Board totals")
     a("")
     a(f"- {len(movements):,} movements across {len(days)} days ({span})")
@@ -163,8 +183,8 @@ def report(board_path: Path, tracks_path: Path, reports_dir: Path) -> int:
     out.write_text(text)
     REPORT_MD.write_text(text)
     SUBJECT.write_text(
-        f"EBB daily report {now:%Y-%m-%d %H:%M} EAT: +{len(added)} movements, "
-        f"+{len(new_tracks)} tracks, {len(movements)} total\n")
+        f"EBB daily report {now:%Y-%m-%d %H:%M} EAT: +{day_mv} movements, "
+        f"+{day_tr} tracks (both runs), {len(movements)} total\n")
 
     hist = reports_dir / "history.csv"
     new_file = not hist.exists()
