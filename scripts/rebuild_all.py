@@ -254,16 +254,23 @@ async def seed_pass(client, headers, auth, seed, since: datetime, out: dict,
             except Exception as e:
                 print(f"  [{i}/{len(seed)}] {number}: FAILED {type(e).__name__}: {e}")
                 break
-            raw = resp.json()
-            if not (raw.get("result", {}).get("response", {}) or {}).get("data"):
+            raw = None
+            try:
+                raw = resp.json()
+                if not (raw.get("result", {}).get("response", {}) or {}).get("data"):
+                    break
+                df = flight_list_df(raw)
+                for row in df.iter_rows(named=True):
+                    r = seed_row(row, number, airline)
+                    if r and r["flight_id_hex"] not in out:
+                        out[r["flight_id_hex"]] = r
+                        added += 1
+                oldest = df["ATOD"].min()
+            except Exception as e:
+                top = list((raw or {}).keys())[:6] if isinstance(raw, dict) else type(raw).__name__
+                print(f"  [{i}/{len(seed)}] {number}: unusable payload "
+                      f"({type(e).__name__}: {e}) keys={top} - skipping")
                 break
-            df = flight_list_df(raw)
-            for row in df.iter_rows(named=True):
-                r = seed_row(row, number, airline)
-                if r and r["flight_id_hex"] not in out:
-                    out[r["flight_id_hex"]] = r
-                    added += 1
-            oldest = df["ATOD"].min()
             if oldest is not None and oldest < since:
                 break
             if not (raw["result"]["response"].get("page") or {}).get("more"):
